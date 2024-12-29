@@ -71,6 +71,11 @@ header .logo span {
     margin: 0 auto;
 }
 
+.portfolio-content h4 {
+    font-size: 24px;
+    margin-top: 20px;
+}
+
 /* Portfolio Section */
 .portfolio {
     background-color: #fff;
@@ -205,66 +210,65 @@ header .logo span {
     background-color: #0056b3;
 }
 
-/* Sub-Problems Section Styling */
-.project_details-text .sub-problems {
-    margin-top: 30px;
-    padding: 20px;
-    background-color: #fef8e6;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+/* About Project Section */
+.project_details {
+    padding: 50px 20px;
+    background-color: #f4f4f4;
+    margin-bottom: 50px;
 }
 
-.project_details-text .sub-problems h3 {
+/* Text Styling for Project Details */
+.project_details-text h2 {
+    font-size: 36px;
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.project_details-text h4 {
+    font-size: 28px;
+    color: #f7c04a;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.project_details-text p {
+    font-size: 18px;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Styling for Project Sub-Problems */
+.project_details-text h3 {
     font-size: 24px;
     color: #333;
-    margin-bottom: 15px;
-    text-align: center;
-    text-transform: uppercase;
-    font-weight: bold;
-    border-bottom: 2px solid #f7c04a;
-    display: inline-block;
-    padding-bottom: 5px;
+    margin-top: 40px;
 }
 
-.project_details-text .sub-problems ul {
-    list-style: none;
+.project_details-text ul {
+    list-style-type: none;
     padding: 0;
-    margin: 20px 0;
 }
 
-.project_details-text .sub-problems ul li {
-    display: flex;
-    align-items: flex-start;
-    margin-bottom: 20px;
-    padding: 15px;
-    background-color: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+.project_details-text ul li {
+    font-size: 18px;
+    margin-bottom: 15px;
 }
 
-.project_details-text .sub-problems ul li:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-}
-
-.project_details-text .sub-problems ul li::before {
-    content: '✔'; /* Icon for each sub-problem */
-    font-size: 20px;
+.project_details-text ul li strong {
     color: #f7c04a;
-    margin-right: 15px;
-    flex-shrink: 0;
 }
 
-.project_details-text .sub-problems ul li strong {
+/* Problem Statement Highlight */
+.project_details-text p {
     font-size: 18px;
     color: #333;
-    margin-bottom: 5px;
-    display: block;
-}
-
-.project_details-text .sub-problems ul li p {
-    font-size: 16px;
-    color: #666;
-    margin: 0;
+    font-weight: 500;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #e6e6e6;
+    padding: 15px;
+    border-left: 5px solid #f7c04a;
 }
