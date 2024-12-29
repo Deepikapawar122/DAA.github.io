@@ -9,56 +9,41 @@
     scroll-behavior: smooth;
 }
 
-/* Add the video background in DAA section */
-.daa-section {
-    position: relative;
-    height: 100vh; /* Make it full screen */
-    overflow: hidden;
-}
-
-.algorithmic-video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Ensure the video covers the section without distortion */
-    z-index: -1; /* Keep the video behind content */
-}
-
-.daa-content {
-    position: relative;
-    z-index: 1; /* Keep content above the video */
-    color: white; /* Adjust text color for visibility */
-    padding: 20px;
+/* Contact section styles */
+.contact {
+    padding: 40px;
     text-align: center;
 }
 
-.daa-content h1 {
-    font-size: 3rem;
-    font-weight: bold;
+.contact-text h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.contact-text h3 {
+    font-size: 1.5em;
     margin-bottom: 20px;
 }
 
-.daa-content p {
-    font-size: 1.2rem;
-    line-height: 1.6;
-    margin-bottom: 30px;
+.contact-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
 }
 
-.daa-content .btn {
-    padding: 14px 40px;
-    border-radius: 0.5rem;
-    font-size: 17px;
-    font-weight: 500;
-    background: #0096c7;
-    color: white;
-    border: 1px solid #0096c7;
-    transition: all .40s ease;
+.contact-icons a {
+    font-size: 2.5rem;
+    color: var(--text-color);
+    transition: all 0.3s ease;
+    background: var(--main-color);
+    padding: 15px;
+    border-radius: 50%;
+    text-decoration: none;
 }
 
-.daa-content .btn:hover {
-    transform: scale(1.01) translateY(-5px);
+.contact-icons a:hover {
+    transform: scale(1.1);
     background: transparent;
-    border: 1px solid #0096c7;
+    border: 2px solid var(--main-color);
 }
