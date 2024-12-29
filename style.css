@@ -1,209 +1,91 @@
-/* Basic Styles */
-body {
-    font-family: 'Quicksand', sans-serif;
-    background-color: #f4f4f4;
+/* General reset and layout */
+* {
     margin: 0;
     padding: 0;
-    color: #333;
+    box-sizing: border-box;
 }
-
-/* Section Layout */
-section {
-    padding: 50px 20px;
-    margin-bottom: 50px;
-}
-
-/* Header Styles */
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #333;
-    color: white;
-    padding: 20px 40px;
-}
-
-header .logo {
-    font-size: 28px;
-}
-
-header .logo span {
-    color: #f7c04a;
-}
-
-.navbar {
-    list-style: none;
-    display: flex;
-}
-
-.navbar li {
-    margin: 0 15px;
-}
-
-.navbar li a {
-    color: white;
-    font-weight: 500;
-    font-size: 18px;
-}
-
-.navbar li a:hover {
-    color: #f7c04a;
-}
-
-/* Course Details Section */
-.course_details h2 {
-    text-align: center;
-    font-size: 36px;
-    margin-bottom: 20px;
-}
-
-.course_details h4 {
-    font-size: 24px;
-    color: #f7c04a;
-    text-align: center;
-    margin-bottom: 30px;
-}
-
-.course_details p {
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f9;
     line-height: 1.6;
-    font-size: 18px;
-    max-width: 800px;
-    margin: 0 auto;
+    color: #333;
+    padding: 30px 0;
 }
-
-.portfolio-content h4 {
-    font-size: 24px;
-    margin-top: 20px;
-}
-
-/* Portfolio Section */
-.portfolio {
-    background-color: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-    padding: 30px;
-    margin-top: 30px;
-}
-
-.portfolio .row {
-    display: inline-block;
-    width: 23%;
-    margin: 15px;
-    border-radius: 10px;
-    background-color: #fafafa;
-    padding: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.portfolio .row img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-}
-
-.portfolio .row:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-}
-
-.portfolio .row h3 {
-    margin-top: 15px;
-    font-size: 18px;
-    font-weight: 500;
-}
-
-/* Buttons */
-.btn {
-    background-color: #f7c04a;
-    padding: 10px 20px;
-    border-radius: 5px;
-    color: white;
-    font-size: 16px;
-    margin-top: 10px;
-    display: inline-block;
-    text-align: center;
-    transition: background-color 0.3s ease;
-}
-
-.btn:hover {
-    background-color: #e6b348;
-}
-
-/* Contact Section */
-.contact .team-container {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-}
-
-.contact .team-member {
-    background-color: #fff;
-    padding: 30px;
-    margin: 15px;
-    width: 250px;
-    border-radius: 10px;
-    text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.contact .team-member h4 {
-    font-size: 22px;
-    margin-bottom: 10px;
-}
-
-.contact .team-member p {
-    font-size: 16px;
+h1, h2 {
+    color: #2c3e50;
     margin-bottom: 20px;
 }
 
-.contact .team-member .social-media a {
-    margin: 10px;
-    font-size: 20px;
-    color: #333;
-    transition: color 0.3s ease;
+/* Container and Box Styling */
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-.contact .team-member .social-media a:hover {
-    color: #f7c04a;
+/* Section Styling */
+section {
+    margin-bottom: 40px;
+}
+section h2 {
+    font-size: 1.8rem;
+    border-bottom: 2px solid #2c3e50;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
 }
 
-/* Responsive Layout */
-@media (max-width: 768px) {
-    .portfolio .row {
-        width: 45%;
-    }
+/* Paragraph and List Styling */
+p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+    line-height: 1.8;
+    color: #444;
+}
+ul {
+    margin-left: 20px;
+    list-style-type: disc;
+}
+li {
+    margin-bottom: 10px;
+    font-size: 1rem;
 }
 
-@media (max-width: 480px) {
-    .portfolio .row {
-        width: 100%;
-    }
-
-    header .navbar {
-        display: block;
-        text-align: center;
-    }
-
-    .contact .team-container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .contact .team-member {
-        width: 80%;
-    }
-}
-.btn {
-    padding: 10px 20px;
-    background-color: #007BFF;
-    color: white;
-    border: none;
+/* Links Styling */
+a {
+    color: #3498db;
+    font-weight: 600;
+    text-decoration: none;
+    padding: 5px 10px;
+    border: 2px solid transparent;
     border-radius: 5px;
+    transition: all 0.3s ease;
+}
+a:hover {
+    color: #ffffff;
+    background-color: #3498db;
+    border-color: #3498db;
     text-decoration: none;
 }
 
-.btn:hover {
-    background-color: #0056b3;
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+    h1 {
+        font-size: 2rem;
+    }
+    h2 {
+        font-size: 1.6rem;
+    }
+    ul {
+        padding-left: 20px;
+    }
+    a {
+        font-size: 0.9rem;
+        padding: 3px 8px;
+    }
 }
