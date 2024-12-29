@@ -3,7 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Website with Static Images</title>
+    <title>Website with Social Media Icons</title>
+    <!-- Include Font Awesome for social media icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
     <style>
         * {
             padding: 0;
@@ -59,15 +62,19 @@
             bottom: 0;
         }
 
+        footer p {
+            margin: 10px 0;
+        }
+
         footer a {
             color: white;
-            text-decoration: none;
+            font-size: 2rem; /* Larger icons */
             margin: 0 10px;
-            font-size: 1.2rem;
+            transition: all 0.3s ease;
         }
 
         footer a:hover {
-            text-decoration: underline;
+            color: #eb4a4a; /* Change color on hover */
         }
     </style>
 </head>
@@ -86,12 +93,12 @@
         <img src="https://via.placeholder.com/800x400?text=Image+3" alt="Image 3">
     </div>
 
-    <!-- Footer Section -->
+    <!-- Footer Section with Social Media Icons -->
     <footer>
         <p>Contact Us:</p>
-        <a href="https://www.linkedin.com" target="_blank">LinkedIn</a>
-        <a href="https://github.com" target="_blank">GitHub</a>
-        <a href="mailto:example@example.com" target="_blank">Email</a>
+        <a href="https://www.linkedin.com" target="_blank" class="fab fa-linkedin"></a>
+        <a href="https://github.com" target="_blank" class="fab fa-github"></a>
+        <a href="mailto:example@example.com" target="_blank" class="fas fa-envelope"></a>
     </footer>
 
 </body>
