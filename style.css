@@ -1,64 +1,43 @@
-/* General Styling */
+/* General Reset and Styling */
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Roboto', Arial, sans-serif;
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f9;
+    background-color: #f8f9fc;
     color: #333;
 }
 
-h1, h2 {
-    color: #002855; /* Navy Blue */
+/* Header Styling */
+.page-header {
+    text-align: center;
+    background: linear-gradient(to right, #002855, #0056b3);
+    color: white;
+    padding: 20px 0;
+    margin-bottom: 30px;
+    border-radius: 0 0 12px 12px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
 }
 
-a {
-    color: #0056b3; /* Darker Blue */
-    text-decoration: none;
-}
-a:hover {
-    text-decoration: underline;
+.page-header h1 {
+    font-size: 2.5rem;
+    margin: 0;
+    letter-spacing: 2px;
 }
 
+/* Container Styling */
 .container {
-    max-width: 900px;
+    max-width: 1000px;
     margin: auto;
     padding: 20px;
-}
-
-/* Slideshow Styling */
-.slideshow-container {
-    position: relative;
-    max-width: 100%;
-    margin: auto;
-    background: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    overflow: hidden;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     animation: fadeIn 1.5s ease-in-out;
 }
 
+/* Fade-In Animation */
 @keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-.slide {
-    display: none;
-    padding: 20px;
-    text-align: left;
-    animation: fadeSlide 1.5s ease-in-out;
-}
-
-.slide.active {
-    display: block;
-}
-
-@keyframes fadeSlide {
     from {
         opacity: 0;
         transform: translateY(20px);
@@ -69,85 +48,117 @@ a:hover {
     }
 }
 
-/* Navigation Buttons */
-.navigation {
-    text-align: center;
-    margin-top: 10px;
-}
-.navigation button {
-    background: #002855; /* Navy Blue */
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    margin: 0 5px;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: background 0.3s ease-in-out;
-}
-.navigation button:hover {
-    background: #0056b3; /* Darker Navy Blue */
-}
-
 /* Table Styling */
 table {
     width: 100%;
     border-collapse: collapse;
-    margin: 10px 0;
-    background-color: #f4f4f9;
-    border-radius: 8px;
+    margin: 20px 0;
+    background-color: #f8f9fc;
+    border-radius: 12px;
     overflow: hidden;
 }
+
 table, th, td {
     border: 1px solid #ddd;
 }
+
 th, td {
-    padding: 10px;
+    padding: 15px;
     text-align: left;
+    font-size: 0.95rem;
 }
+
 th {
-    background-color: #002855; /* Navy Blue */
+    background-color: #002855;
     color: white;
+    font-weight: bold;
 }
 
-/* Video Background for Home */
-#home-video-container {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    z-index: -1;
+td {
+    background-color: #f4f6fa;
 }
 
-#home-video {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    min-width: 100%;
-    min-height: 100%;
-    transform: translate(-50%, -50%);
-    object-fit: cover;
-    opacity: 0.8; /* Slight transparency for better readability */
+table tbody tr:hover {
+    background-color: #e3eaf5;
+    cursor: default;
 }
 
-/* Home Page Styling */
-h1 {
+/* Link Styling */
+a {
+    color: #0056b3;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #003a8c;
+}
+
+/* Back Link Styling */
+.back-link {
+    display: block;
     text-align: center;
-    margin-top: 50px;
-    font-size: 3rem;
-    color: white;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
-    animation: textSlide 2s ease-out;
+    margin: 30px 0;
+    font-size: 1rem;
 }
 
-@keyframes textSlide {
-    from {
-        opacity: 0;
-        transform: translateY(-30px);
+.back-link:hover {
+    color: #0056b3;
+}
+
+/* Image Styling */
+.team-photo, .city-plan {
+    display: block;
+    margin: 20px auto;
+    max-width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
+}
+
+.team-photo:hover, .city-plan:hover {
+    transform: scale(1.05);
+}
+
+/* Section Headings */
+h2 {
+    color: #002855;
+    font-size: 1.75rem;
+    margin-top: 20px;
+    text-transform: uppercase;
+    border-bottom: 3px solid #0056b3;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+/* Unordered List Styling */
+ul {
+    margin: 15px 0;
+    padding-left: 20px;
+    list-style-type: square;
+}
+
+ul li {
+    margin-bottom: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
     }
-    to {
-        opacity: 1;
-        transform: translateY(0);
+
+    table th, table td {
+        padding: 10px;
+        font-size: 0.9rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    .page-header h1 {
+        font-size: 2rem;
     }
 }
