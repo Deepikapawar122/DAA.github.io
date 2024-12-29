@@ -33,73 +33,11 @@
             padding: 20px;
         }
 
-        /* Slideshow Styling */
-        .slideshow-container {
-            position: relative;
-            max-width: 100%;
-            margin: auto;
-            background: #fff;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-            overflow: hidden;
-            animation: fadeIn 1.5s ease-in-out;
-        }
-
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-            }
-            to {
-                opacity: 1;
-            }
-        }
-
-        .slide {
-            display: none;
-            padding: 20px;
-            text-align: left;
-            animation: fadeSlide 1.5s ease-in-out;
-        }
-
-        .slide.active {
-            display: block;
-        }
-
-        @keyframes fadeSlide {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        /* Navigation Buttons */
-        .navigation {
-            text-align: center;
-            margin-top: 10px;
-        }
-        .navigation button {
-            background: #002855; /* Navy Blue */
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            margin: 0 5px;
-            cursor: pointer;
-            border-radius: 5px;
-            transition: background 0.3s ease-in-out;
-        }
-        .navigation button:hover {
-            background: #0056b3; /* Darker Navy Blue */
-        }
-
         /* Table Styling */
         table {
             width: 100%;
             border-collapse: collapse;
-            margin: 10px 0;
+            margin: 20px 0;
             background-color: #f4f4f9;
             border-radius: 8px;
             overflow: hidden;
@@ -116,150 +54,136 @@
             color: white;
         }
 
-        /* Video Background for Home */
-        #home-video-container {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            overflow: hidden;
-            z-index: -1;
-        }
-
-        #home-video {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            min-width: 100%;
-            min-height: 100%;
-            transform: translate(-50%, -50%);
-            object-fit: cover;
-            opacity: 0.8; /* Slight transparency for better readability */
-        }
-
-        /* Home Page Styling */
-        h1 {
+        /* Page-Specific Background */
+        .page-header {
             text-align: center;
-            margin-top: 50px;
-            font-size: 3rem;
+            background-color: #002855;
             color: white;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
-            animation: textSlide 2s ease-out;
+            padding: 20px 0;
+            margin-bottom: 20px;
+            border-radius: 0 0 8px 8px;
         }
 
-        @keyframes textSlide {
-            from {
-                opacity: 0;
-                transform: translateY(-30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+        .team-photo,
+        .city-plan {
+            display: block;
+            margin: 20px auto;
+            max-width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .back-link {
+            display: block;
+            text-align: center;
+            margin: 20px 0;
+            text-decoration: none;
+            color: #002855;
+            font-weight: bold;
+        }
+
+        .back-link:hover {
+            color: #0056b3;
         }
     </style>
 </head>
 <body>
-    <!-- Video Background -->
-    <div id="home-video-container">
-        <video id="home-video" autoplay muted loop>
-            <source src="your-algorithmic-video.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-    </div>
-
-    <!-- Home Section -->
-    <div class="container">
-        <h1>Design and Analysis of Algorithms</h1>
-    </div>
-
-    <!-- Slideshow Container -->
-    <div class="slideshow-container">
-        <!-- Slide 1: About the Course -->
-        <div class="slide active">
-            <h2>About the Course</h2>
-            <p><strong>Course Overview:</strong></p>
-            <p>The Design and Analysis of Algorithms course focuses on understanding and evaluating the core algorithms and data structures. It emphasizes efficiency, optimization, and solving real-world problems through algorithms like Binary Search Trees, Hashing, Sorting, String Matching, and Graph Algorithms.</p>
-            <p><strong>Applications:</strong></p>
-            <ul>
-                <li><strong>Binary Search Trees:</strong> Used in databases for indexing.</li>
-                <li><strong>Sorting Algorithms:</strong> Key in file systems and data arrangements.</li>
-                <li><strong>Graph Algorithms:</strong> Important for networking and geographic systems.</li>
-            </ul>
-            <p><strong>Course Distribution Topics (Clusters):</strong></p>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Cluster</th>
-                        <th>Description</th>
-                        <th>Hours</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Cluster 1: Foundations</td>
-                        <td>Design Philosophy and Intuitions, Space and Time Complexities, Order of an Algorithm, Problem Patterns: Recursion, Iteration, Backtracking</td>
-                        <td>06</td>
-                    </tr>
-                    <tr>
-                        <td>Cluster 2: Computing Principles and Tools</td>
-                        <td>Pruning, Edge Relaxation, Sets, Traversals, Prefix and Suffix, Union-Find, Hashing and Other Principles</td>
-                        <td>04</td>
-                    </tr>
-                    <tr>
-                        <td>Cluster 3: Structured Data Management</td>
-                        <td>Graphs and Trees, Tries, AVL Trees, 2-3 Trees, Red-Black Trees, DFS, BFS, Heap, Array Query, Sparse Table, Segment Trees, Fenwick Trees, Skip Lists</td>
-                        <td>10</td>
-                    </tr>
-                </tbody>
-            </table>
+    <!-- About the Course Page -->
+    <div id="about-course" class="container">
+        <div class="page-header">
+            <h1>About the Course</h1>
         </div>
+        <h2>Course Clusters and Hours</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Cluster</th>
+                    <th>Description</th>
+                    <th>Hours</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Cluster 1: Foundations</td>
+                    <td>Design Philosophy and Intuitions, Space and Time Complexities, Order of an Algorithm, Problem patterns: Recursion, Iteration, Backtracking</td>
+                    <td>06</td>
+                </tr>
+                <tr>
+                    <td>Cluster 2: Computing Principles and Tools</td>
+                    <td>Pruning, Edge Relaxation, Sets, Traversals, Prefix and Suffix, Union-Find, Hashing and Other Principles</td>
+                    <td>04</td>
+                </tr>
+                <tr>
+                    <td>Cluster 3: Structured Data Management</td>
+                    <td>Graphs and Trees, Tries, AVL Trees, 2-3 Trees, Red-Black Trees, DFS, BFS, Heap, Array Query, Spare Table, Segment Trees, Fenwick Trees, Skip Lists</td>
+                    <td>10</td>
+                </tr>
+                <tr>
+                    <td>Cluster 4: Sorting and Searching</td>
+                    <td>Sorting and Searching Devices</td>
+                    <td>08</td>
+                </tr>
+                <tr>
+                    <td>Cluster 5: Graph Algorithms</td>
+                    <td>Shortest Path and Spanning Trees</td>
+                    <td>12</td>
+                </tr>
+                <tr>
+                    <td>Cluster 6: Problem Assortments</td>
+                    <td>Problem types, Undecidability, Limitations of Algorithm Power</td>
+                    <td>10</td>
+                </tr>
+            </tbody>
+        </table>
+        <h2>Textbooks</h2>
+        <ul>
+            <li><strong>Thomas H. Cormen, Charles E. Leiserson, Ronald L. Rivest, and Clifford Stein:</strong> <em>Introduction to Algorithms, Fourth Edition, The MIT Press, 2022.</em></li>
+            <li><strong>Anany V. Levitin:</strong> <em>Introduction to the Design and Analysis of Algorithms. Addison-Wesley Longman Publishing Co, 2012.</em></li>
+        </ul>
+        <h2>References</h2>
+        <ul>
+            <li>Hemant Jain, Problem Solving Using Data and Algorithms Using C, Taran Technologies Private Limited, 2016.</li>
+            <li>HackerRank / CodeChef / SPOJ</li>
+        </ul>
+        <a href="#about-project" class="back-link">Go to About the Project</a>
+    </div>
 
-        <!-- Slide 2: About the Project -->
-        <div class="slide">
-            <h2>About the Project</h2>
-            <p><strong>Project Overview:</strong></p>
-            <p>Our project focuses on designing a smart city layout emphasizing unemployment rate monitoring and job distribution. By leveraging algorithms such as Dijkstra's, Kruskal's, and KMP, the system optimizes job distribution, monitors economic inequality, and recommends future policies.</p>
-            <p><strong>Key Features:</strong></p>
-            <ul>
-                <li>Monitor unemployment in districts.</li>
-                <li>Match job seekers to opportunities based on profiles.</li>
-                <li>Optimize job distribution geographically.</li>
-            </ul>
+    <!-- About the Project Page -->
+    <div id="about-project" class="container">
+        <div class="page-header">
+            <h1>About the Project</h1>
         </div>
+        <h2>Group Photo</h2>
+        <img src="group-photo.jpg" alt="Team Photo" class="team-photo">
+
+        <h2>City Plan</h2>
+        <img src="city-plan.jpg" alt="City Plan" class="city-plan">
+
+        <h2>Problem Statement</h2>
+        <p>Our project aims to design a smart city layout that focuses on unemployment rate monitoring and job distribution. This system uses advanced algorithms to optimize the distribution of resources, promote equitable opportunities, and support sustainable development policies.</p>
+
+        <h2>Work Distribution</h2>
+        <ul>
+            <li><strong>Case 1:</strong> Member A - Initial data analysis and visualization</li>
+            <li><strong>Case 2:</strong> Member B - Algorithm implementation for Dijkstra's shortest path</li>
+            <li><strong>Case 3:</strong> Member C - Geographic data processing and matching</li>
+            <li><strong>Case 4:</strong> Member D - Policy alignment and recommendations</li>
+            <li><strong>Case 5:</strong> Collaborative - Testing and debugging</li>
+            <li><strong>Case 6:</strong> Collaborative - Final report preparation</li>
+        </ul>
+
+        <h2>Project Description</h2>
+        <p>Our project addresses six critical cases to tackle unemployment and optimize job distribution. Each case focuses on specific aspects like geographic data analysis, real-time monitoring, and algorithm efficiency.</p>
+
+        <h2>Algorithm Implementation Details</h2>
+        <p>The project leverages algorithms such as Dijkstra's, Kruskal's, and KMP for tasks like pathfinding, optimal resource distribution, and pattern matching. The implementation ensures scalability and efficiency.</p>
+
+        <h2>SDG Alignment</h2>
+        <p>This project aligns with the United Nations' Sustainable Development Goals (SDGs), particularly Goal 8 (Decent Work and Economic Growth) and Goal 11 (Sustainable Cities and Communities).</p>
+
+        <h2>Project Functionalities</h2>
+        <p>The functionalities revolve around addressing the problem statement and ensuring equitable job distribution through algorithmic optimization, monitoring, and recommendations.</p>
+        <a href="#about-course" class="back-link">Go to About the Course</a>
     </div>
-
-    <!-- Navigation Buttons -->
-    <div class="navigation">
-        <button onclick="prevSlide()">Previous</button>
-        <button onclick="nextSlide()">Next</button>
-    </div>
-
-    <script>
-        let currentSlide = 0;
-
-        function showSlide(index) {
-            const slides = document.querySelectorAll('.slide');
-            slides.forEach((slide, i) => {
-                slide.classList.remove('active');
-                if (i === index) {
-                    slide.classList.add('active');
-                }
-            });
-        }
-
-        function nextSlide() {
-            const slides = document.querySelectorAll('.slide');
-            currentSlide = (currentSlide + 1) % slides.length;
-            showSlide(currentSlide);
-        }
-
-        function prevSlide() {
-            const slides = document.querySelectorAll('.slide');
-            currentSlide = (currentSlide - 1 + slides.length) % slides.length;
-            showSlide(currentSlide);
-        }
-    </script>
 </body>
 </html>
