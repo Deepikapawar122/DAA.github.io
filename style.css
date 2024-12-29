@@ -209,3 +209,9 @@ header .logo span {
 .btn:hover {
     background-color: #0056b3;
 }
+home-text h2 {
+    font-size: 80px; /* You can adjust this value to your preferred size */
+    color: #FF5733;  /* Replace with your desired color */
+    font-weight: bold;
+    text-transform: uppercase;
+}
