@@ -8,7 +8,7 @@
         body {
             font-family: Arial, sans-serif;
             line-height: 1.6;
-            margin: 20px;
+            margin: 0;
             padding: 0;
             background-color: #f4f4f9;
         }
@@ -18,17 +18,43 @@
         .container {
             max-width: 900px;
             margin: auto;
-            background: #fff;
             padding: 20px;
+        }
+        .slideshow-container {
+            position: relative;
+            max-width: 100%;
+            margin: auto;
+            background: #fff;
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden; /* Prevent overflow during animation */
         }
-        ul {
-            margin: 0;
-            padding-left: 20px;
+        .slide {
+            display: none;
+            padding: 20px;
+            text-align: left;
+            opacity: 0; /* Start with transparent slide */
+            transition: opacity 1s ease-in-out; /* Smooth transition */
         }
-        li {
-            margin: 10px 0;
+        .slide.active {
+            display: block;
+            opacity: 1; /* Fade-in effect */
+        }
+        .navigation {
+            text-align: center;
+            margin-top: 10px;
+        }
+        .navigation button {
+            background: #007BFF;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            margin: 0 5px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .navigation button:hover {
+            background: #0056b3;
         }
         a {
             color: #007BFF;
@@ -37,76 +63,130 @@
         a:hover {
             text-decoration: underline;
         }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 10px 0;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f4f4f9;
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>Algorithm Learning Reflections</h1>
         
-        <!-- Home Page Section -->
-        <section>
-            <h2>Home Page – Introduction</h2>
-            <p><strong>Course Overview:</strong></p>
-            <p>The Design and Analysis of Algorithms course is centered around understanding and evaluating the core algorithms and data structures that form the backbone of computer science. It dives into both the theoretical and practical aspects of algorithm design, focusing on efficiency and optimization. The course provides the tools needed to analyze the performance of algorithms and apply them to solve real-world problems effectively.</p>
+        <div class="slideshow-container">
+            <!-- Slide 1: About the Course -->
+            <div class="slide active">
+                <h2>About the Course</h2>
+                <p><strong>Course Overview:</strong></p>
+                <p>The Design and Analysis of Algorithms course focuses on understanding and evaluating the core algorithms and data structures. It emphasizes efficiency, optimization, and solving real-world problems through algorithms like Binary Search Trees, Hashing, Sorting, String Matching, and Graph Algorithms.</p>
+                <p><strong>Applications:</strong></p>
+                <ul>
+                    <li><strong>Binary Search Trees:</strong> Used in databases for indexing.</li>
+                    <li><strong>Sorting Algorithms:</strong> Key in file systems and data arrangements.</li>
+                    <li><strong>Graph Algorithms:</strong> Important for networking and geographic systems.</li>
+                </ul>
+                <p><strong>Course Distribution Topics (Clusters):</strong></p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Cluster</th>
+                            <th>Description</th>
+                            <th>Hours</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Cluster 1: Foundations</td>
+                            <td>Design Philosophy and Intuitions, Space and Time Complexities, Order of an Algorithm, Problem Patterns: Recursion, Iteration, Backtracking</td>
+                            <td>06</td>
+                        </tr>
+                        <tr>
+                            <td>Cluster 2: Computing Principles and Tools</td>
+                            <td>Pruning, Edge Relaxation, Sets, Traversals, Prefix and Suffix, Union-Find, Hashing and Other Principles</td>
+                            <td>04</td>
+                        </tr>
+                        <tr>
+                            <td>Cluster 3: Structured Data Management</td>
+                            <td>Graphs and Trees, Tries, AVL Trees, 2-3 Trees, Red-Black Trees, DFS, BFS, Heap, Array Query, Sparse Table, Segment Trees, Fenwick Trees, Skip Lists</td>
+                            <td>10</td>
+                        </tr>
+                        <tr>
+                            <td>Cluster 4: Sorting and Searching</td>
+                            <td>Sorting and Searching Devices</td>
+                            <td>08</td>
+                        </tr>
+                        <tr>
+                            <td>Cluster 5: Graph Algorithms</td>
+                            <td>Shortest Path and Spanning Trees</td>
+                            <td>12</td>
+                        </tr>
+                        <tr>
+                            <td>Cluster 6: Problem Assortments</td>
+                            <td>Problem Types, Undecidability, Limitations of Algorithm Power</td>
+                            <td>10</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <!-- Slide 2: About the Project -->
+            <div class="slide">
+                <h2>About the Project</h2>
+                <p><strong>Project Overview:</strong></p>
+                <p>Our project focuses on designing a smart city layout emphasizing unemployment rate monitoring and job distribution. By leveraging algorithms such as Dijkstra's, Kruskal's, and KMP, the system optimizes job distribution, monitors economic inequality, and recommends future policies.</p>
+                <p><strong>Key Features:</strong></p>
+                <ul>
+                    <li>Monitor unemployment in districts.</li>
+                    <li>Match job seekers to opportunities based on profiles.</li>
+                    <li>Optimize job distribution geographically.</li>
+                </ul>
+            </div>
+        </div>
 
-            <p><strong>Data Structures and Algorithms Studied:</strong></p>
-            <ul>
-                <li><strong>Binary Search Trees (BST):</strong> Used for efficient searching, insertion, and deletion operations, depending on tree balance.</li>
-                <li><strong>Hashing:</strong> Provides fast data retrieval through hash functions and hash tables.</li>
-                <li><strong>Sorting Algorithms:</strong> Explored algorithms like Quick Sort, Merge Sort, Bubble Sort, Insertion Sort, Selection Sort, and Heap Sort.</li>
-                <li><strong>String Matching Algorithms:</strong> Includes Naive String Matching, Knuth-Morris-Pratt (KMP), Rabin-Karp, and Boyer-Moore.</li>
-                <li><strong>Graph Algorithms:</strong> Included Dijkstra’s algorithm, Bellman-Ford, DFS, BFS, Prim’s, and Kruskal’s algorithms for network-related problems.</li>
-            </ul>
-
-            <p><strong>Connecting the Course with Real-Time Applications:</strong></p>
-            <ul>
-                <li><strong>Binary Search Trees and Hashing:</strong> Used in databases for indexing and search operations.</li>
-                <li><strong>Sorting Algorithms:</strong> Essential in databases, file systems, and websites for arranging and filtering data.</li>
-                <li><strong>String Matching Algorithms:</strong> Critical in search engines, bioinformatics, and text editors.</li>
-                <li><strong>Graph Algorithms:</strong> Important for networking, social networks, and geographic systems.</li>
-            </ul>
-        </section>
-
-        <!-- Problem Space and Findings Section -->
-        <section>
-            <h2>1. Problem Space and Findings</h2>
-            <p><strong>Project Overview:</strong></p>
-            <p>For our course project, we focused on the design and optimization of a smart city layout, with a primary emphasis on unemployment rate monitoring and job distribution. The problem space emerged from the challenge of managing urban unemployment and ensuring equitable access to job opportunities in a data-driven city environment. We arrived at this problem space by analyzing issues such as high unemployment rates in certain regions and the lack of efficient systems for distributing job opportunities.</p>
-            <p>Inspired by the increasing adoption of smart city technologies like IoT sensors, data analytics, and AI, we developed a system that integrates job distribution and unemployment monitoring within the city’s infrastructure. The system uses graph-based routing, job-matching algorithms, and predictive models to connect individuals with appropriate job opportunities. By applying these algorithms, we aim to improve job access and reduce unemployment disparities across different regions of the city.</p>
-            <p>Our research, based on white papers and case studies, highlighted how smart cities leverage technology to collect and analyze data for decision-making, especially in areas like urban planning and economic development. These insights guided our approach in creating a solution that addresses both the economic and operational challenges cities face in managing job markets.</p>
-        </section>
-
-        <!-- Problem Definition and Team Details Section -->
-        <section>
-            <h2>2. Problem Definition and Team Details</h2>
-            <p><strong>Problem Definition:</strong></p>
-            <p>This system addresses economic inequality by analysing unemployment data, monitoring job availability, and optimizing job distribution. The goal is to reduce unemployment rates and ensure fair job allocation based on skills, location, and industry demands.</p>
-            <p>The project focuses on improving the employment rate and ensuring fair job distribution across the city. The system will:</p>
-            <ul>
-                <li>Monitor unemployment in various districts.</li>
-                <li>Match job seekers to jobs based on profiles and market demand.</li>
-                <li>Predict and recommend policies for future unemployment trends.</li>
-            </ul>
-
-            <p><strong>Business Cases and Team Members:</strong></p>
-            <ul>
-                <li><strong>Job Vacancy Database Management (Shreya Hadikar):</strong> Uses Quick Sort and Merge Sort to efficiently manage job listings. It serves as the foundation for other business cases.</li>
-                <li><strong>Unemployment Rate Calculation (Priyanka Badiger):</strong> Uses Dijkstra’s and Bellman-Ford algorithms to calculate the unemployment rate and analyze efficient pathways to employment.</li>
-                <li><strong>Job Matching System (Aishwarya Talikoti):</strong> Uses Knuth-Morris-Pratt and Rabin-Karp for efficient job matching based on skills, qualifications, and preferences.</li>
-                <li><strong>Job Distribution Optimization (Shreya Hadikar):</strong> Uses Kruskal’s, Prim’s, and Floyd’s algorithms to optimize job distribution based on geographic location and industry demands.</li>
-                <li><strong>Job Search System (Priyanka Badiger):</strong> Uses Brute Force String Matching for job seekers to search jobs based on preferences such as location and salary.</li>
-                <li><strong>Economic Inequality Reporting (Aishwarya Talikoti):</strong> Uses Warshall’s and BFS algorithms to analyze patterns of economic inequality across different city sectors.</li>
-            </ul>
-
-            <p><strong>Team Members:</strong></p>
-            <ul>
-                <li><strong>Shreya Hadikar (Project Lead & Job Distribution Optimization):</strong> Coordinates the project and focuses on optimizing job distribution across the city.</li>
-                <li><strong>Priyanka Badiger (Unemployment Rate Calculation & Job Search System):</strong> Leads the development of algorithms to calculate unemployment rates and manage job search systems.</li>
-                <li><strong>Aishwarya Talikoti (Job Matching & Economic Inequality Reporting):</strong> Focuses on developing the job matching system and analyzing economic inequalities within the city.</li>
-            </ul>
-        </section>
+        <!-- Navigation Buttons -->
+        <div class="navigation">
+            <button onclick="prevSlide()">Previous</button>
+            <button onclick="nextSlide()">Next</button>
+        </div>
 
         <a href="index.html">Back to Home</a>
     </div>
+
+    <script>
+        let currentSlide = 0;
+
+        function showSlide(index) {
+            const slides = document.querySelectorAll('.slide');
+            slides.forEach((slide, i) => {
+                slide.classList.remove('active');
+                if (i === index) {
+                    slide.classList.add('active');
+                }
+            });
+        }
+
+        function nextSlide() {
+            const slides = document.querySelectorAll('.slide');
+            currentSlide = (currentSlide + 1) % slides.length;
+            showSlide(currentSlide);
+        }
+
+        function prevSlide() {
+            const slides = document.querySelectorAll('.slide');
+            currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+            showSlide(currentSlide);
+        }
+    </script>
 </body>
 </html>
