@@ -1,6 +1,6 @@
 /* Basic Styles */
 body {
-    font-family: 'Quicksand', sans-serif;
+    font-family: 'Times New Roman', Times, serif;
     background-color: #f4f4f4;
     margin: 0;
     padding: 0;
@@ -195,6 +195,8 @@ header .logo span {
         width: 80%;
     }
 }
+
+/* Button Styles */
 .btn {
     padding: 10px 20px;
     background-color: #007BFF;
