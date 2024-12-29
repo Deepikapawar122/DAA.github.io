@@ -223,10 +223,12 @@ header .logo span {
     color: #333;
     text-align: center;
     margin-bottom: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
 }
 
 .project_details-text h4 {
-    font-size: 28px;
+    font-size: 24px;
     color: #f7c04a;
     text-align: center;
     margin-bottom: 30px;
@@ -235,40 +237,89 @@ header .logo span {
 .project_details-text p {
     font-size: 18px;
     line-height: 1.6;
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-/* Styling for Project Sub-Problems */
-.project_details-text h3 {
-    font-size: 24px;
     color: #333;
-    margin-top: 40px;
-}
-
-.project_details-text ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-.project_details-text ul li {
-    font-size: 18px;
-    margin-bottom: 15px;
-}
-
-.project_details-text ul li strong {
-    color: #f7c04a;
+    max-width: 800px;
+    margin: 0 auto 20px;
+    text-align: justify;
 }
 
 /* Problem Statement Highlight */
-.project_details-text p {
-    font-size: 18px;
-    color: #333;
-    font-weight: 500;
-    line-height: 1.6;
-    max-width: 800px;
-    margin: 0 auto;
-    background-color: #e6e6e6;
+.project_details-text .problem-statement {
+    background-color: #fef8e6;
     padding: 15px;
     border-left: 5px solid #f7c04a;
+    font-size: 18px;
+    color: #333;
+    line-height: 1.6;
+    font-weight: 500;
+    margin: 30px auto;
+    max-width: 800px;
+}
+
+/* Styling for Sub-Problems Section */
+.project_details-text .sub-problems {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.project_details-text .sub-problems h3 {
+    font-size: 24px;
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-bottom: 2px solid #f7c04a;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.project_details-text .sub-problems ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+    text-align: left;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.project_details-text .sub-problems ul li {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #fef8e6;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.project_details-text .sub-problems ul li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.project_details-text .sub-problems ul li::before {
+    content: '✔'; /* Icon for each sub-problem */
+    font-size: 20px;
+    color: #f7c04a;
+    margin-right: 15px;
+    flex-shrink: 0;
+}
+
+.project_details-text .sub-problems ul li strong {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.project_details-text .sub-problems ul li p {
+    font-size: 16px;
+    color: #666;
+    margin: 0;
 }
