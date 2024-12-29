@@ -1,217 +1,533 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" type="text/css" href="style.css">
-  <title>Bootstrap Animation Example</title>
+/*
+	Rocket Internet by TEMPLATE STOCK
+    templatestock.co @templatestock
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+*/
 
-  <!-- Link to Bootstrap CSS (via CDN) -->
-  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+/* Typography CSS */
+body
+{
+    font-family: 'Lato', sans-serif;
+    color: #41484b;
+}
 
-  <!-- Link to Animate.css for more animations -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
 
-  <!-- Custom CSS for additional styling -->
-  <style>
-    body {
-      background-color: navy;
-      color: white;
+
+/* Heder */
+#homeFullScreen {
+    width: 100%;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: cover;
+    background-position: top center;
+}
+
+#homeFullScreen {
+    background-image: url('../images/header.png');
+    overflow: hidden;
+}
+
+#homeFullScreen {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    margin: auto;
+}
+
+.header-text h1
+{
+    font-size: 60px;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.header-text .vertical-line
+{
+    height: 2px;
+    background-color: #fff;
+    width: 150px;
+    margin: 0 auto;
+    margin-top: 15px;
+    margin-bottom: 30px;
+}
+
+.header-text p
+{
+    font-size: 26px;
+    color: #fff;
+}
+
+
+/* feature */
+.feature img
+{
+    width: 100%;
+}
+
+.nopadding {
+   padding: 0 !important;
+   margin: 0 !important;
+}
+
+.feature-box
+{
+    padding: 20px;
+}
+
+.feature-box h1
+{
+    font-size: 35px;
+    text-transform: uppercase;
+    font-weight: 600;   
+    margin-top: 2em;
+}
+
+.feature-box p
+{
+    font-size: 25px;
+    text-align: justify;
+}
+
+/* Portfolio */
+.portfolio .heading
+{
+    font-size: 35px;
+    text-transform: uppercase;
+    font-weight: 600;
+    text-align: center;
+    margin: 50px 0px;
+}
+
+.portfolio img
+{
+    width: 100%;
+    cursor: pointer;
+}
+
+.portfolio .last-img
+{
+    margin-bottom: 20px;
+}
+
+/* Call to Action */
+.call-top-action
+{
+    background-color: #42484c;
+    color: #fff;
+    padding: 50px 0px;
+    margin-top: 50px;
+}
+
+.call-top-action h1
+{
+    font-size: 35px;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+    margin: 0px;
+}
+
+.call-top-action p
+{
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+.call-top-action span
+{
+
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Footer */
+footer
+{
+    text-align: center;
+    margin-top: 30px;
+}
+
+footer ul
+{
+    padding: 0px;
+    list-style: none;
+    margin: 20px;
+}
+
+footer ul li
+{
+    display: inline-block;
+    margin-left: 15px;
+}
+
+footer ul li a span
+{
+    width: 50px;
+    height: 50px;
+    background: #42484C;
+    display: block;
+    font-size: 30px;
+    line-height: 50px;
+    color: #fff;
+    border-radius: 50%;
+}
+
+footer .copyright
+{
+    font-size: 22px;
+    margin-bottom: 20px;
+    display: block;
+}
+
+
+
+/* Extra Small devices  */
+@media (max-width: 480px) {
+	
+}
+
+/* Extra Small devices  */
+@media (max-width: 767px) {
+    .header-text h1 {
+        font-size: 45px;
     }
 
-    .custom-style {
-      background-color: #f8f9fa;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      transition: transform 0.5s ease-in-out;
+    .header-text .vertical-line {        
+        margin-top: 15px;
+        margin-bottom: 15px;
     }
 
-    .custom-style:hover {
-      transform: scale(1.05);
+    .header-text p {
+        font-size: 20px;
+        color: #fff;
     }
 
-    .container {
-      margin-top: 50px;
-      position: relative;
-      z-index: 10;
+    .feature-box {
+        padding: 0px;
     }
 
-    .fade-in {
-      animation: fadeIn 2s ease-out forwards;
+    .feature-box h1 {
+        font-size: 25px;
+        margin-top: 2em;
     }
 
-    @keyframes fadeIn {
-      from {
-        opacity: 0;
-      }
-      to {
-        opacity: 1;
-      }
+    .feature-box p {
+        font-size: 20px;
+        text-align: justify;
     }
 
-    /* Full screen video background */
-    #video-background {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      z-index: -1;
-    }
-  </style>
-</head>
-<body>
-
-  <!-- Algorithmic Video Background -->
-  <video id="video-background" autoplay muted loop>
-    <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4"> <!-- You can replace this with a more fitting video -->
-    Your browser does not support the video tag.
-  </video>
-
-  <div class="container">
-    <h1 class="text-center animate__animated animate__fadeInDown">Welcome to My Page!</h1>
-
-    <div class="row justify-content-center">
-      <div class="col-md-6">
-        <!-- Card with Bootstrap and Custom CSS styling -->
-        <div class="card custom-style animate__animated animate__fadeIn">
-          <div class="card-body">
-            <h5 class="card-title">Amazing Card</h5>
-            <p class="card-text">This is a simple card with Bootstrap and custom CSS animations applied. Hover over to see the effect!</p>
-            <a href="#" class="btn btn-primary">Learn More</a>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Button that triggers fade-in animation on click -->
-    <div class="text-center mt-4">
-      <button class="btn btn-success" id="animateButton">Click to Animate</button>
-      <div id="animatedContent" class="mt-3 fade-in" style="display: none;">
-        <p>This content fades in when you click the button.</p>
-      </div>
-    </div>
-  </div>
-
-  <!-- Link to Bootstrap JS and Popper.js (for Bootstrap components like dropdowns, modals) -->
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
-  <!-- Custom JS to trigger animation -->
-  <script>
-    document.getElementById("animateButton").addEventListener("click", function() {
-      const content = document.getElementById("animatedContent");
-      content.style.display = 'block'; // Show content
-      content.classList.add("animate__fadeIn");
-    });
-  </script>
-</body>
-</html>
-UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bootstrap Animation Example</title>
-
-  <!-- Link to Bootstrap CSS (via CDN) -->
-  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-
-  <!-- Link to Animate.css for more animations -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
-
-  <!-- Custom CSS for additional styling -->
-  <style>
-    body {
-      background-color: navy;
-      color: white;
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      height: 100vh;
-      overflow: hidden;
+    .nopadding {
+        padding: 15px !important;
+        margin: 0 !important;
     }
 
-    #video-background {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      z-index: -1;
+    .portfolio img {        
+        margin-bottom: 15px;
     }
 
-    .container {
-      margin-top: 50px;
-      position: relative;
-      z-index: 10;
-      padding: 20px;
+    .call-top-action h1 {
+        font-size: 24px;
+        text-transform: uppercase;
+        margin-bottom: 15px !important;
+        margin: 0px;
     }
 
-    .custom-style {
-      background-color: #f1f1f1;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      transition: transform 0.5s ease-in-out;
+    .call-top-action p {
+        font-size: 14px;
+        margin-bottom: 10px;
     }
 
-    .custom-style:hover {
-      transform: scale(1.05);
+    .call-top-action span {
+        font-size: 15px;
+        font-weight: bold;
     }
 
-    .fade-in {
-      animation: fadeIn 2s ease-out forwards;
+    footer ul li a span {
+        width: 40px;
+        height: 40px;
+        background: #42484C;
+        display: block;
+        font-size: 22px;
+        line-height: 40px;
+        color: #fff;
+        border-radius: 50%;
     }
 
-    @keyframes fadeIn {
-      from {
-        opacity: 0;
-      }
-      to {
-        opacity: 1;
-      }
+    footer .copyright {
+        font-size: 16px;
+        margin-bottom: 20px;
+        display: block;
+    }
+}
+
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) {  
+    .header-text h1 {
+        font-size: 45px;
     }
 
-    h1 {
-      text-align: center;
-      font-size: 2.5em;
-      margin-bottom: 20px;
+    .header-text p {
+        font-size: 20px;
+        color: #fff;
     }
 
-    .btn {
-      padding: 10px 20px;
-      font-size: 1.1em;
-      border-radius: 5px;
+    .feature-box h1 {
+        font-size: 25px;
+        text-transform: uppercase;
+        font-weight: 600;
+        margin-top: 1em;
+    }
+	
+    .feature-box p {
+        font-size: 18px;
+        text-align: justify;
     }
 
-    .btn-primary {
-      background-color: navy;
-      border-color: navy;
+    .call-top-action h1 {
+        font-size: 25px;
+        text-transform: uppercase;
+        margin-bottom: 13px !important;
+        margin: 0px;
     }
 
-    .btn-primary:hover {
-      background-color: #003366;
-      border-color: #003366;
+    .call-top-action p {
+        font-size: 14px;
+        margin-bottom: 13px;
     }
 
-    .btn-success {
-      background-color: #28a745;
-      border-color: #28a745;
+    .call-top-action span {
+        font-size: 17px;
+        font-weight: bold;
     }
 
-    .btn-success:hover {
-      background-color: #218838;
-      border-color: #1e7e34;
+    footer {
+        text-align: center;
+        margin-top: 23px;
     }
-  </style>
-</head>
-<body>
 
-  <!-- Algorithmic Video Background -->
-  <video id="video-background" autoplay muted loop>
-    <so
+    footer ul li a span {
+        width: 40px;
+        height: 40px;
+        background: #42484C;
+        display: block;
+        font-size: 22px;
+        line-height: 40px;
+        color: #fff;
+        border-radius: 50%;
+    }   
+
+    footer .copyright {
+        font-size: 18px;
+    }
+
+
+
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) { 
+    .feature-box {
+        padding: 10px;
+    }
+
+    .feature-box h1 {
+        font-size: 30px;    
+    }
+
+    .feature-box p {
+        font-size: 20px;
+    }
+
+    .call-top-action p
+    {
+        font-size: 19px;
+    }
+
+    .call-top-action h1 {
+        font-size: 30px;
+       margin-bottom: 15px !important;
+    }
+
+    .call-top-action span {
+        font-size: 20px;
+    }
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    /* Typography CSS */
+body
+{
+    font-family: 'Lato', sans-serif;
+    color: #41484b;
+}
+
+
+
+/* Heder */
+#homeFullScreen {
+    width: 100%;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: cover;
+    background-position: top center;
+}
+
+#homeFullScreen {
+    background-image: url('../images/header.png');
+    overflow: hidden;
+}
+
+#homeFullScreen {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    margin: auto;
+}
+
+.header-text h1
+{
+    font-size: 60px;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.header-text .vertical-line
+{
+    height: 2px;
+    background-color: #fff;
+    width: 150px;
+    margin: 0 auto;
+    margin-top: 15px;
+    margin-bottom: 30px;
+}
+
+.header-text p
+{
+    font-size: 26px;
+    color: #fff;
+}
+
+
+/* feature */
+.feature img
+{
+    width: 100%;
+}
+
+.nopadding {
+   padding: 0 !important;
+   margin: 0 !important;
+}
+
+.feature-box
+{
+    padding: 20px;
+}
+
+.feature-box h1
+{
+    font-size: 35px;
+    text-transform: uppercase;
+    font-weight: 600;   
+    margin-top: 2em;
+}
+
+.feature-box p
+{
+    font-size: 25px;
+    text-align: justify;
+}
+
+/* Portfolio */
+.portfolio .heading
+{
+    font-size: 35px;
+    text-transform: uppercase;
+    font-weight: 600;
+    text-align: center;
+    margin: 50px 0px;
+}
+
+.portfolio img
+{
+    width: 100%;
+    cursor: pointer;
+}
+
+.portfolio .last-img
+{
+    margin-bottom: 20px;
+}
+
+/* Call to Action */
+.call-top-action
+{
+    background-color: #42484c;
+    color: #fff;
+    padding: 50px 0px;
+    margin-top: 50px;
+}
+
+.call-top-action h1
+{
+    font-size: 35px;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+    margin: 0px;
+}
+
+.call-top-action p
+{
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+.call-top-action span
+{
+
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Footer */
+footer
+{
+    text-align: center;
+    margin-top: 30px;
+}
+
+footer ul
+{
+    padding: 0px;
+    list-style: none;
+    margin: 20px;
+}
+
+footer ul li
+{
+    display: inline-block;
+    margin-left: 15px;
+}
+
+footer ul li a span
+{
+    width: 50px;
+    height: 50px;
+    background: #42484C;
+    display: block;
+    font-size: 30px;
+    line-height: 50px;
+    color: #fff;
+    border-radius: 50%;
+}
+
+footer .copyright
+{
+    font-size: 22px;
+    margin-bottom: 20px;
+    display: block;
+}
+
+
+}
