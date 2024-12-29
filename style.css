@@ -1,69 +1,43 @@
-/* General Styles */
+/* General Styling */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
     margin: 0;
     padding: 0;
-    background-color: #f9f9f9;
+    background-color: #f4f4f9;
     color: #333;
+}
+
+h1, h2 {
+    color: #002855; /* Navy Blue */
+}
+
+a {
+    color: #0056b3; /* Darker Blue */
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+
+.container {
+    max-width: 900px;
+    margin: auto;
+    padding: 20px;
+}
+
+/* Slideshow Styling */
+.slideshow-container {
+    position: relative;
+    max-width: 100%;
+    margin: auto;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
     animation: fadeIn 1.5s ease-in-out;
 }
 
-/* Header */
-header {
-    background-color: #4CAF50;
-    color: white;
-    text-align: center;
-    padding: 2rem 1rem;
-    animation: slideDown 1s ease-out;
-}
-
-header h1 {
-    margin: 0;
-    font-size: 2.5rem;
-}
-
-header p {
-    margin: 0.5rem 0 0;
-    font-size: 1.2rem;
-}
-
-/* Main Content */
-main {
-    padding: 2rem;
-    animation: fadeIn 2s ease-in-out;
-}
-
-section {
-    margin-bottom: 2rem;
-}
-
-section h2 {
-    color: #4CAF50;
-    border-bottom: 2px solid #ddd;
-    padding-bottom: 0.5rem;
-    margin-bottom: 1rem;
-    position: relative;
-    animation: slideFromLeft 1s ease-out;
-}
-
-section ul li {
-    margin: 0.5rem 0;
-    animation: fadeInUp 0.8s ease-in-out;
-}
-
-/* Footer */
-footer {
-    text-align: center;
-    background-color: #333;
-    color: white;
-    padding: 1rem 0;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-    animation: slideUp 1s ease-in-out;
-}
-
-/* Animations */
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -73,46 +47,107 @@ footer {
     }
 }
 
-@keyframes slideDown {
-    from {
-        transform: translateY(-50px);
-        opacity: 0;
-    }
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
+.slide {
+    display: none;
+    padding: 20px;
+    text-align: left;
+    animation: fadeSlide 1.5s ease-in-out;
 }
 
-@keyframes slideFromLeft {
-    from {
-        transform: translateX(-100px);
-        opacity: 0;
-    }
-    to {
-        transform: translateX(0);
-        opacity: 1;
-    }
+.slide.active {
+    display: block;
 }
 
-@keyframes slideUp {
+@keyframes fadeSlide {
     from {
-        transform: translateY(50px);
         opacity: 0;
-    }
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
-
-@keyframes fadeInUp {
-    from {
         transform: translateY(20px);
-        opacity: 0;
     }
     to {
-        transform: translateY(0);
         opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Navigation Buttons */
+.navigation {
+    text-align: center;
+    margin-top: 10px;
+}
+.navigation button {
+    background: #002855; /* Navy Blue */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 0 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s ease-in-out;
+}
+.navigation button:hover {
+    background: #0056b3; /* Darker Navy Blue */
+}
+
+/* Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 10px 0;
+    background-color: #f4f4f9;
+    border-radius: 8px;
+    overflow: hidden;
+}
+table, th, td {
+    border: 1px solid #ddd;
+}
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+th {
+    background-color: #002855; /* Navy Blue */
+    color: white;
+}
+
+/* Video Background for Home */
+#home-video-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+}
+
+#home-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+    opacity: 0.8; /* Slight transparency for better readability */
+}
+
+/* Home Page Styling */
+h1 {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 3rem;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+    animation: textSlide 2s ease-out;
+}
+
+@keyframes textSlide {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
 }
