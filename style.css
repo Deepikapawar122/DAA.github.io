@@ -14,7 +14,7 @@ body {
 
 header {
     position: relative;
-    background: linear-gradient(135deg, rgba(74, 144, 226, 0.8), rgba(0, 80, 158, 0.8)), url('https://www.example.com/algorithmic-world.mp4') no-repeat center/cover;
+    background: linear-gradient(135deg, rgba(0, 0, 128, 0.8), rgba(0, 0, 64, 0.8)), url('https://www.example.com/algorithmic-world.mp4') no-repeat center/cover;
     color: white;
     text-align: center;
     padding: 50px 20px;
@@ -45,7 +45,7 @@ header video {
 }
 
 nav {
-    background-color: #00509e;
+    background-color: #000080; /* Navy blue */
     text-align: center;
     padding: 15px 0;
     position: sticky;
@@ -66,7 +66,7 @@ nav a {
 }
 
 nav a:hover {
-    background-color: #003f7f;
+    background-color: #003366; /* Darker navy for hover */
     color: #e0f7fa;
 }
 
@@ -105,7 +105,7 @@ nav a.active {
 #about h2 {
     font-size: 2.5em;
     margin-bottom: 20px;
-    color: #00509e;
+    color: #000080; /* Navy blue */
 }
 
 #about p {
@@ -115,7 +115,7 @@ nav a.active {
 }
 
 footer {
-    background-color: #003f7f;
+    background-color: #000080; /* Navy blue */
     color: white;
     padding: 20px;
     text-align: center;
