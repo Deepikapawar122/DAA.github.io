@@ -3,188 +3,205 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <title>Algorithm Portfolio</title>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> Design and analysis of algorithm</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
-        /* General Styling */
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
+        * {
             margin: 0;
             padding: 0;
-            background-color: #f4f4f9;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #fce4ec;
             color: #333;
+            line-height: 1.6;
+            font-size: 16px;
         }
 
-        h1, h2 {
-            color: #002855; /* Navy Blue */
-        }
-
-        a {
-            color: #0056b3; /* Darker Blue */
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-
-        .container {
-            max-width: 900px;
-            margin: auto;
-            padding: 20px;
-        }
-
-        /* Table Styling */
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 20px 0;
-            background-color: #f4f4f9;
-            border-radius: 8px;
+        header {
+            position: relative;
             overflow: hidden;
-        }
-        table, th, td {
-            border: 1px solid #ddd;
-        }
-        th, td {
-            padding: 10px;
-            text-align: left;
-        }
-        th {
-            background-color: #002855; /* Navy Blue */
+            background: linear-gradient(135deg, #f06292, #ff80ab);
             color: white;
+            text-align: center;
+            padding: 50px 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         }
 
-        /* Page-Specific Background */
-        .page-header {
+        header h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            animation: bounce 1.5s infinite alternate;
+        }
+
+        header p {
+            font-size: 1.2em;
+        }
+
+        .bubble {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background: rgba(255, 255, 255, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            border-radius: 50%;
+            filter: blur(2px);
+            animation: move 10s infinite;
+        }
+
+        .bubble:nth-child(1) { top: 20%; left: 10%; animation-duration: 12s; }
+        .bubble:nth-child(2) { top: 50%; left: 25%; width: 70px; height: 70px; animation-duration: 14s; }
+        .bubble:nth-child(3) { top: 70%; left: 70%; width: 40px; height: 40px; animation-duration: 10s; }
+        .bubble:nth-child(4) { top: 30%; left: 80%; width: 60px; height: 60px; animation-duration: 15s; }
+
+        @keyframes move {
+            0% { transform: translateY(0) translateX(0); }
+            50% { transform: translateY(-30px) translateX(20px); }
+            100% { transform: translateY(0) translateX(0); }
+        }
+
+        nav {
+            background-color: #f48fb1;
             text-align: center;
-            background-color: #002855;
+            padding: 15px 0;
+            animation: slideIn 1s ease-out;
+        }
+
+        nav a {
             color: white;
-            padding: 20px 0;
-            margin-bottom: 20px;
-            border-radius: 0 0 8px 8px;
-        }
-
-        .team-photo,
-        .city-plan {
-            display: block;
-            margin: 20px auto;
-            max-width: 100%;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-        }
-
-        .back-link {
-            display: block;
-            text-align: center;
-            margin: 20px 0;
             text-decoration: none;
-            color: #002855;
+            margin: 0 20px;
+            font-size: 1.1em;
             font-weight: bold;
+            padding: 5px 10px;
+            border-radius: 5px;
+            transition: background 0.3s ease;
         }
 
-        .back-link:hover {
-            color: #0056b3;
+        nav a:hover {
+            background-color: #f06292;
+        }
+
+        #about, #student-details, #team-members {
+            padding: 60px 20px;
+            text-align: center;
+            background-color: #fff;
+            margin: 40px 0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            animation: fadeIn 2s ease-in;
+        }
+
+        #about p, #student-details p {
+            font-size: 1.1em;
+            color: #555;
+        }
+
+        .team-member {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .member {
+            text-align: center;
+        }
+
+        .member img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+        }
+
+        footer {
+            background-color: #d81b60;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes bounce {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0); }
+        }
+
+        @keyframes slideIn {
+            from { transform: translateY(-100px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
         }
     </style>
 </head>
 <body>
-    <!-- About the Course Page -->
-    <div id="about-course" class="container">
-        <div class="page-header">
-            <h1>About the Course</h1>
+    <header>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <h1>Deepika Pawar - DAA Portfolio</h1>
+        <p>Welcome to my Design and Analysis of Algorithms Portfolio</p>
+    </header>
+
+    <nav>
+        <a href="#about">About Me</a>
+        <a href="#student-details">Student Details</a>
+        <a href="#team-members">Team Members</a>
+        <a href="about-course.html">About the Course</a>
+        <a href="about-project.html">About the Project</a>
+    </nav>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <p>Hi! I'm Deepika pawar, a computer science student with a passion for solving complex problems and mastering algorithms.</p>
+    </section>
+
+    <section id="student-details">
+        <h2>Student Details</h2>
+        <p>USN: 01FE23BCS181</p>
+        <p>I am a Computer Science student dedicated to mastering efficient coding practices and contributing to innovative projects.</p>
+    </section>
+
+    <section id="team-members">
+        <h2>Course Project Members</h2>
+        <div class="team-member">
+            <div class="member">
+                <img src="https://example.com/sinchana.jpg" alt="Sinchana">
+                <p>Sinchana SM</p>
+                <a href="mailto:sinchana@example.com">Email</a><br>
+                <a href="https://github.com/sinchana" target="_blank">GitHub</a>
+            </div>
+            <div class="member">
+                <img src="https://example.com/namrutha.jpg" alt="Namrutha">
+                <p>Namrutha</p>
+                <a href="mailto:namrutha@example.com">Email</a><br>
+                <a href="https://github.com/namrutha" target="_blank">GitHub</a>
+            </div>
+            <div class="member">
+                <img src="https://example.com/nisha.jpg" alt="Nisha">
+                <p>Nisha</p>
+                <a href="mailto:nisha@example.com">Email</a><br>
+                <a href="https://github.com/nisha" target="_blank">GitHub</a>
+            </div>
+            <div class="member">
+                <img src="https://example.com/deepika.jpg" alt="Deepika">
+                <p>Deepika</p>
+                <a href="mailto:deepika@example.com">Email</a><br>
+                <a href="https://github.com/deepika" target="_blank">GitHub</a>
+            </div>
         </div>
-        <h2>Course Clusters and Hours</h2>
-        <table>
-            <thead>
-                <tr>
-                    <th>Cluster</th>
-                    <th>Description</th>
-                    <th>Hours</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Cluster 1: Foundations</td>
-                    <td>Design Philosophy and Intuitions, Space and Time Complexities, Order of an Algorithm, Problem patterns: Recursion, Iteration, Backtracking</td>
-                    <td>06</td>
-                </tr>
-                <tr>
-                    <td>Cluster 2: Computing Principles and Tools</td>
-                    <td>Pruning, Edge Relaxation, Sets, Traversals, Prefix and Suffix, Union-Find, Hashing and Other Principles</td>
-                    <td>04</td>
-                </tr>
-                <tr>
-                    <td>Cluster 3: Structured Data Management</td>
-                    <td>Graphs and Trees, Tries, AVL Trees, 2-3 Trees, Red-Black Trees, DFS, BFS, Heap, Array Query, Spare Table, Segment Trees, Fenwick Trees, Skip Lists</td>
-                    <td>10</td>
-                </tr>
-                <tr>
-                    <td>Cluster 4: Sorting and Searching</td>
-                    <td>Sorting and Searching Devices</td>
-                    <td>08</td>
-                </tr>
-                <tr>
-                    <td>Cluster 5: Graph Algorithms</td>
-                    <td>Shortest Path and Spanning Trees</td>
-                    <td>12</td>
-                </tr>
-                <tr>
-                    <td>Cluster 6: Problem Assortments</td>
-                    <td>Problem types, Undecidability, Limitations of Algorithm Power</td>
-                    <td>10</td>
-                </tr>
-            </tbody>
-        </table>
-        <h2>Textbooks</h2>
-        <ul>
-            <li><strong>Thomas H. Cormen, Charles E. Leiserson, Ronald L. Rivest, and Clifford Stein:</strong> <em>Introduction to Algorithms, Fourth Edition, The MIT Press, 2022.</em></li>
-            <li><strong>Anany V. Levitin:</strong> <em>Introduction to the Design and Analysis of Algorithms. Addison-Wesley Longman Publishing Co, 2012.</em></li>
-        </ul>
-        <h2>References</h2>
-        <ul>
-            <li>Hemant Jain, Problem Solving Using Data and Algorithms Using C, Taran Technologies Private Limited, 2016.</li>
-            <li>HackerRank / CodeChef / SPOJ</li>
-        </ul>
-        <a href="#about-project" class="back-link">Go to About the Project</a>
-    </div>
+    </section>
 
-    <!-- About the Project Page -->
-    <div id="about-project" class="container">
-        <div class="page-header">
-            <h1>About the Project</h1>
-        </div>
-        <h2>Group Photo</h2>
-        <img src="group-photo.jpg" alt="Team Photo" class="team-photo">
-
-        <h2>City Plan</h2>
-        <img src="city-plan.jpg" alt="City Plan" class="city-plan">
-
-        <h2>Problem Statement</h2>
-        <p>Our project aims to design a smart city layout that focuses on unemployment rate monitoring and job distribution. This system uses advanced algorithms to optimize the distribution of resources, promote equitable opportunities, and support sustainable development policies.</p>
-
-        <h2>Work Distribution</h2>
-        <ul>
-            <li><strong>Case 1:</strong> Member A - Initial data analysis and visualization</li>
-            <li><strong>Case 2:</strong> Member B - Algorithm implementation for Dijkstra's shortest path</li>
-            <li><strong>Case 3:</strong> Member C - Geographic data processing and matching</li>
-            <li><strong>Case 4:</strong> Member D - Policy alignment and recommendations</li>
-            <li><strong>Case 5:</strong> Collaborative - Testing and debugging</li>
-            <li><strong>Case 6:</strong> Collaborative - Final report preparation</li>
-        </ul>
-
-        <h2>Project Description</h2>
-        <p>Our project addresses six critical cases to tackle unemployment and optimize job distribution. Each case focuses on specific aspects like geographic data analysis, real-time monitoring, and algorithm efficiency.</p>
-
-        <h2>Algorithm Implementation Details</h2>
-        <p>The project leverages algorithms such as Dijkstra's, Kruskal's, and KMP for tasks like pathfinding, optimal resource distribution, and pattern matching. The implementation ensures scalability and efficiency.</p>
-
-        <h2>SDG Alignment</h2>
-        <p>This project aligns with the United Nations' Sustainable Development Goals (SDGs), particularly Goal 8 (Decent Work and Economic Growth) and Goal 11 (Sustainable Cities and Communities).</p>
-
-        <h2>Project Functionalities</h2>
-        <p>The functionalities revolve around addressing the problem statement and ensuring equitable job distribution through algorithmic optimization, monitoring, and recommendations.</p>
-        <a href="#about-course" class="back-link">Go to About the Course</a>
-    </div>
+    <footer>
+        <p>&copy; 2024 Sinchana SM - All Rights Reserved</p>
+    </footer>
 </body>
 </html>
