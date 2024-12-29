@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Algorithm Learning Reflections</title>
+    <!-- Bootstrap CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -15,11 +18,6 @@
         h1, h2 {
             color: #333;
         }
-        .container {
-            max-width: 900px;
-            margin: auto;
-            padding: 20px;
-        }
         .slideshow-container {
             position: relative;
             max-width: 100%;
@@ -27,19 +25,21 @@
             background: #fff;
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            overflow: hidden; /* Prevent overflow during animation */
+            overflow: hidden;
         }
-        .slide {
-            display: none;
+        .carousel-inner .carousel-item {
+            transition: opacity 1s ease-in-out;
+            opacity: 0;
+        }
+        .carousel-item-next, .carousel-item-prev, .carousel-item.active {
+            opacity: 1;
+        }
+
+        .carousel-item {
             padding: 20px;
             text-align: left;
-            opacity: 0; /* Start with transparent slide */
-            transition: opacity 1s ease-in-out; /* Smooth transition */
         }
-        .slide.active {
-            display: block;
-            opacity: 1; /* Fade-in effect */
-        }
+
         .navigation {
             text-align: center;
             margin-top: 10px;
@@ -63,130 +63,112 @@
         a:hover {
             text-decoration: underline;
         }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 10px 0;
-        }
-        table, th, td {
-            border: 1px solid #ddd;
-        }
-        th, td {
-            padding: 8px;
-            text-align: left;
-        }
-        th {
-            background-color: #f4f4f9;
+
+        .carousel-caption {
+            background-color: rgba(0, 0, 0, 0.5);
+            border-radius: 5px;
+            padding: 10px;
         }
     </style>
 </head>
 <body>
-    <div class="container">
+
+    <div class="container mt-4">
         <h1>Algorithm Learning Reflections</h1>
-        
-        <div class="slideshow-container">
-            <!-- Slide 1: About the Course -->
-            <div class="slide active">
-                <h2>About the Course</h2>
-                <p><strong>Course Overview:</strong></p>
-                <p>The Design and Analysis of Algorithms course focuses on understanding and evaluating the core algorithms and data structures. It emphasizes efficiency, optimization, and solving real-world problems through algorithms like Binary Search Trees, Hashing, Sorting, String Matching, and Graph Algorithms.</p>
-                <p><strong>Applications:</strong></p>
-                <ul>
-                    <li><strong>Binary Search Trees:</strong> Used in databases for indexing.</li>
-                    <li><strong>Sorting Algorithms:</strong> Key in file systems and data arrangements.</li>
-                    <li><strong>Graph Algorithms:</strong> Important for networking and geographic systems.</li>
-                </ul>
-                <p><strong>Course Distribution Topics (Clusters):</strong></p>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Cluster</th>
-                            <th>Description</th>
-                            <th>Hours</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Cluster 1: Foundations</td>
-                            <td>Design Philosophy and Intuitions, Space and Time Complexities, Order of an Algorithm, Problem Patterns: Recursion, Iteration, Backtracking</td>
-                            <td>06</td>
-                        </tr>
-                        <tr>
-                            <td>Cluster 2: Computing Principles and Tools</td>
-                            <td>Pruning, Edge Relaxation, Sets, Traversals, Prefix and Suffix, Union-Find, Hashing and Other Principles</td>
-                            <td>04</td>
-                        </tr>
-                        <tr>
-                            <td>Cluster 3: Structured Data Management</td>
-                            <td>Graphs and Trees, Tries, AVL Trees, 2-3 Trees, Red-Black Trees, DFS, BFS, Heap, Array Query, Sparse Table, Segment Trees, Fenwick Trees, Skip Lists</td>
-                            <td>10</td>
-                        </tr>
-                        <tr>
-                            <td>Cluster 4: Sorting and Searching</td>
-                            <td>Sorting and Searching Devices</td>
-                            <td>08</td>
-                        </tr>
-                        <tr>
-                            <td>Cluster 5: Graph Algorithms</td>
-                            <td>Shortest Path and Spanning Trees</td>
-                            <td>12</td>
-                        </tr>
-                        <tr>
-                            <td>Cluster 6: Problem Assortments</td>
-                            <td>Problem Types, Undecidability, Limitations of Algorithm Power</td>
-                            <td>10</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-            
-            <!-- Slide 2: About the Project -->
-            <div class="slide">
-                <h2>About the Project</h2>
-                <p><strong>Project Overview:</strong></p>
-                <p>Our project focuses on designing a smart city layout emphasizing unemployment rate monitoring and job distribution. By leveraging algorithms such as Dijkstra's, Kruskal's, and KMP, the system optimizes job distribution, monitors economic inequality, and recommends future policies.</p>
-                <p><strong>Key Features:</strong></p>
-                <ul>
-                    <li>Monitor unemployment in districts.</li>
-                    <li>Match job seekers to opportunities based on profiles.</li>
-                    <li>Optimize job distribution geographically.</li>
-                </ul>
+
+        <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <!-- Slide 1: About the Course -->
+                <div class="carousel-item active">
+                    <div class="carousel-caption">
+                        <h2>About the Course</h2>
+                        <p><strong>Course Overview:</strong></p>
+                        <p>The Design and Analysis of Algorithms course focuses on understanding and evaluating the core algorithms and data structures. It emphasizes efficiency, optimization, and solving real-world problems.</p>
+                        <p><strong>Applications:</strong></p>
+                        <ul>
+                            <li><strong>Binary Search Trees:</strong> Used in databases for indexing.</li>
+                            <li><strong>Sorting Algorithms:</strong> Key in file systems and data arrangements.</li>
+                            <li><strong>Graph Algorithms:</strong> Important for networking and geographic systems.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Slide 2: About the Project -->
+                <div class="carousel-item">
+                    <div class="carousel-caption">
+                        <h2>About the Project</h2>
+                        <p><strong>Project Overview:</strong></p>
+                        <p>Our project focuses on designing a smart city layout emphasizing unemployment rate monitoring and job distribution. By leveraging algorithms such as Dijkstra's, Kruskal's, and KMP, the system optimizes job distribution and recommends future policies.</p>
+                        <p><strong>Key Features:</strong></p>
+                        <ul>
+                            <li>Monitor unemployment in districts.</li>
+                            <li>Match job seekers to opportunities based on profiles.</li>
+                            <li>Optimize job distribution geographically.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Slide 3: Course Distribution Topics (Clusters) -->
+                <div class="carousel-item">
+                    <div class="carousel-caption">
+                        <h2>Course Distribution Topics (Clusters)</h2>
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>Cluster</th>
+                                    <th>Description</th>
+                                    <th>Hours</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Cluster 1: Foundations</td>
+                                    <td>Design Philosophy, Space and Time Complexities, Recursion, Iteration</td>
+                                    <td>06</td>
+                                </tr>
+                                <tr>
+                                    <td>Cluster 2: Computing Principles</td>
+                                    <td>Pruning, Edge Relaxation, Sets, Traversals, Hashing</td>
+                                    <td>04</td>
+                                </tr>
+                                <tr>
+                                    <td>Cluster 3: Structured Data Management</td>
+                                    <td>Graphs, Trees, Tries, AVL Trees, BFS, DFS</td>
+                                    <td>10</td>
+                                </tr>
+                                <tr>
+                                    <td>Cluster 4: Sorting and Searching</td>
+                                    <td>Sorting Algorithms</td>
+                                    <td>08</td>
+                                </tr>
+                                <tr>
+                                    <td>Cluster 5: Graph Algorithms</td>
+                                    <td>Shortest Path and Spanning Trees</td>
+                                    <td>12</td>
+                                </tr>
+                                <tr>
+                                    <td>Cluster 6: Problem Assortments</td>
+                                    <td>Undecidability, Limitations of Algorithm Power</td>
+                                    <td>10</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
             </div>
         </div>
 
         <!-- Navigation Buttons -->
-        <div class="navigation">
-            <button onclick="prevSlide()">Previous</button>
-            <button onclick="nextSlide()">Next</button>
+        <div class="navigation mt-4">
+            <button onclick="prevSlide()" class="btn btn-primary">Previous</button>
+            <button onclick="nextSlide()" class="btn btn-primary">Next</button>
         </div>
 
         <a href="index.html">Back to Home</a>
     </div>
 
-    <script>
-        let currentSlide = 0;
+    <!-- Bootstrap JS and dependencies (for slide navigation) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 
-        function showSlide(index) {
-            const slides = document.querySelectorAll('.slide');
-            slides.forEach((slide, i) => {
-                slide.classList.remove('active');
-                if (i === index) {
-                    slide.classList.add('active');
-                }
-            });
-        }
-
-        function nextSlide() {
-            const slides = document.querySelectorAll('.slide');
-            currentSlide = (currentSlide + 1) % slides.length;
-            showSlide(currentSlide);
-        }
-
-        function prevSlide() {
-            const slides = document.querySelectorAll('.slide');
-            currentSlide = (currentSlide - 1 + slides.length) % slides.length;
-            showSlide(currentSlide);
-        }
-    </script>
 </body>
 </html>
