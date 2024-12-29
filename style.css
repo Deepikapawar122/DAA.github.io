@@ -1,230 +1,244 @@
-/* General Reset and Body Styling */
-* {
+/* Basic Styling */
+body {
+    font-family: 'Quicksand', sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-body {
-    font-family: 'Quicksand', sans-serif;
     background-color: #f4f4f4;
 }
 
-/* Header Section */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Header Styling */
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
     background-color: #333;
-    color: white;
+    padding: 20px 40px;
 }
 
 header .logo {
-    font-size: 2rem;
-    font-weight: bold;
+    color: #fff;
+    font-size: 28px;
 }
 
 header .logo span {
-    color: #3498db;
+    color: #f7c04a;
 }
 
-header .navbar {
+.navbar {
     list-style: none;
     display: flex;
 }
 
-header .navbar li {
+.navbar li {
     margin: 0 15px;
 }
 
-header .navbar li a {
+.navbar li a {
     color: white;
-    text-decoration: none;
     font-weight: 500;
+    font-size: 18px;
+}
+
+.navbar li a:hover {
+    color: #f7c04a;
 }
 
 /* Home Section */
 .home {
     position: relative;
     height: 100vh;
-    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000;
 }
 
-.home .back-video {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+.back-video {
     position: absolute;
     top: 0;
     left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
     z-index: -1;
 }
 
-.home-text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    color: white;
-}
-
 .home-text h1 {
-    font-size: 3rem;
+    font-size: 60px;
+    color: #fff;
+    text-align: center;
 }
 
 .home-text h3 {
-    font-size: 1.5rem;
-    font-weight: 400;
-}
-
-/* Course Details Section */
-.course_details {
-    padding: 50px 20px;
-    background-color: #fff;
-    color: #333;
-}
-
-.course_details-text {
+    font-size: 30px;
+    color: #f7c04a;
     text-align: center;
 }
 
-.course_details-text h2 {
-    font-size: 2.5rem;
-    font-weight: bold;
+/* Social Media Icons Styling */
+.contact .team-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
 }
 
-.course_details-text h4 {
-    font-size: 1.5rem;
+.contact .team-member {
+    background-color: #fff;
+    padding: 30px;
+    margin: 20px;
+    width: 250px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact .team-member h4 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.contact .team-member p {
+    font-size: 16px;
     margin-bottom: 20px;
+}
+
+.contact .team-member .btn {
+    background-color: #f7c04a;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    margin: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact .team-member .btn:hover {
+    background-color: #e6b348;
+}
+
+/* Social Media Icons */
+.social-media {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.social-media a {
+    margin: 0 15px;
+    color: #333;
+    font-size: 24px;
+    transition: color 0.3s ease;
+}
+
+.social-media a:hover {
+    color: #f7c04a;
+}
+
+.social-media a i {
+    transition: transform 0.3s ease;
+}
+
+.social-media a:hover i {
+    transform: scale(1.1);
+}
+
+/* Social Media Icon Styles - Updated */
+.contact .team-member .social-media {
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.contact .team-member .social-media a {
+    font-size: 20px;
+    margin: 0 10px;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+.contact .team-member .social-media a:hover {
+    color: #f7c04a;
+}
+
+/* Scroll Top Button */
+.top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #f7c04a;
+    padding: 10px;
+    border-radius: 50%;
+    font-size: 24px;
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.top:hover {
+    background-color: #e6b348;
+}
+
+.top i {
+    transition: transform 0.3s ease;
+}
+
+.top:hover i {
+    transform: translateY(-5px);
 }
 
 /* Portfolio Section */
 .portfolio {
-    background-color: #f9f9f9;
-    padding: 50px 20px;
-    text-align: center;
+    padding: 60px 40px;
+    background-color: #fff;
 }
 
-.portfolio-content {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
+.portfolio .main-text h2 {
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.portfolio .main-text h4 {
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 40px;
 }
 
 .portfolio-content .row {
-    position: relative;
-    transition: transform 0.3s ease-in-out;
+    display: inline-block;
+    width: 23%;
+    margin: 10px;
 }
 
 .portfolio-content .row img {
     width: 100%;
-    border-radius: 8px;
-    transition: transform 0.3s ease;
-}
-
-.portfolio-content .row:hover img {
-    transform: scale(1.1);
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .portfolio-content .row h3 {
+    text-align: center;
     margin-top: 10px;
-    font-size: 1.25rem;
-}
-
-.portfolio-content .row h6 {
-    font-size: 1rem;
-}
-
-/* Contact Section */
-.contact {
-    padding: 50px 20px;
-    background-color: #fff;
-    text-align: center;
-}
-
-.contact .contact-text h2 {
-    font-size: 2.5rem;
-    font-weight: bold;
-}
-
-.contact .contact-text h3 {
-    font-size: 1.5rem;
-    margin-bottom: 20px;
-}
-
-.team-container {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    gap: 20px;
-}
-
-.team-member {
-    background-color: #fff;
-    border: 1px solid #ddd;
-    padding: 20px;
-    border-radius: 8px;
-    width: 250px;
-    text-align: center;
-}
-
-.team-member h4 {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-}
-
-.team-member p {
-    font-size: 1rem;
-    margin-bottom: 10px;
-}
-
-/* Social Media Icons */
-.social-icon {
-    font-size: 2rem;
-    margin: 0 10px;
-    color: #333;
-    transition: color 0.3s ease;
-    display: inline-block;
-}
-
-.social-icon:hover {
-    color: #3498db; /* LinkedIn blue or any color you prefer */
-}
-
-.social-icon i {
-    font-size: 2.5rem; /* Adjust icon size */
-    transition: transform 0.3s ease;
-}
-
-.social-icon:hover i {
-    transform: scale(1.2);
-}
-
-/* Scroll to Top */
-.top {
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
-    background-color: #3498db;
-    padding: 15px;
-    border-radius: 50%;
-    color: white;
-    text-align: center;
-    font-size: 2rem;
-    display: none;
-    cursor: pointer;
-}
-
-.top:hover {
-    background-color: #2980b9;
+    font-size: 18px;
 }
 
 /* Responsive Styles */
 @media (max-width: 768px) {
-    .portfolio-content {
-        grid-template-columns: repeat(2, 1fr);
+    .navbar {
+        display: block;
+        text-align: center;
+    }
+
+    .navbar li {
+        margin: 10px 0;
     }
 
     .team-container {
@@ -233,6 +247,30 @@ header .navbar li a {
     }
 
     .team-member {
-        width: 90%;
+        width: 80%;
+        margin: 10px 0;
+    }
+
+    .portfolio-content .row {
+        width: 45%;
+        margin: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .portfolio-content .row {
+        width: 100%;
+    }
+
+    .home-text h1 {
+        font-size: 40px;
+    }
+
+    .home-text h3 {
+        font-size: 22px;
+    }
+
+    .social-media a {
+        font-size: 20px;
     }
 }
