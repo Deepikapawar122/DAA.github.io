@@ -506,3 +506,62 @@ contact.team-image {
     }
     /* Add additional row styling as needed */
 </style>
+
+
+<style>
+    /* Course Content Table Styling */
+    .course-content-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 30px auto;
+        font-family: 'Arial', sans-serif;
+        font-size: 1rem;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    }
+
+    .course-content-table thead {
+        background: linear-gradient(90deg, #4caf50, #81c784); /* Green gradient */
+        color: white;
+        text-transform: uppercase;
+    }
+
+    .course-content-table th {
+        padding: 15px;
+        text-align: left;
+        font-weight: bold;
+        font-size: 1.1rem;
+    }
+
+    .course-content-table tbody tr {
+        transition: all 0.3s ease;
+    }
+
+    .course-content-table td {
+        padding: 15px;
+        background: #f9f9f9; /* Light grey background for content */
+        border-bottom: 1px solid #ddd;
+    }
+
+    .course-content-table tr:nth-child(even) td {
+        background: #ffffff; /* White background for alternate rows */
+    }
+
+    .course-content-table tbody tr:hover {
+        background: #e8f5e9; /* Light green background on hover */
+        transform: scale(1.02); /* Slight scaling effect */
+    }
+
+    .course-content-table td strong {
+        color: #388e3c; /* Green color for topic titles */
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+        .course-content-table th, .course-content-table td {
+            font-size: 0.9rem;
+            padding: 10px;
+        }
+    }
+</style>
