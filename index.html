@@ -31,21 +31,26 @@
 <body>
 
 <!-- DAA Section with Background Video -->
-<section id="daa">
-    <div class="video-background">
-        <video autoplay muted loop>
-            <source src="data projected against dark blue background_preview.mp4" type="video/mp4">
-            <!-- You can add additional formats like .webm or .ogg for compatibility -->
-        </video>
-    </div>
-    <div class="content">
-        <h1>Data Structures and Algorithms (DAA)</h1>
-        <p>Introduction to the fundamentals of data structures and algorithms...</p>
-    </div>
-</section>
+<style>
+		.video-container {
+			position: relative;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			height: 100vh;
+			overflow: hidden;
+		}
+
+		video {
+			position: absolute;
+			z-index: 10;
+			width: 100%;
+			height: 100vh;
+			max-width: none;
+		}
+	</style>
 
 </body>
-</html>
 
         <h2 class="logo">Portfo<span>lio</span></h2>
         <ul class="navbar">
