@@ -662,3 +662,34 @@ body {
     background-position: center;
     padding: 20px;
 }
+/* Home Section */
+.home {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Ensure no scrollbars appear */
+    background-image: url('https://wallpapercave.com/wp/wp3621208.jpg'); /* Fallback background */
+    background-size: cover; /* Ensure the image covers the area */
+    background-position: center;
+}
+
+/* Background Video */
+.back-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Scale the video properly */
+    z-index: -1; /* Ensure the video stays behind content */
+}
+
+/* Text Styling */
+.home-text-h2 {
+    text-align: center;
+    color: white;
+    z-index: 1; /* Ensure the text is above the video */
+}
