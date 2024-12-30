@@ -640,3 +640,12 @@ tr:hover {
 .next-btn {
     right: 0;
 }
+/* Styling for each Business Case */
+.business-case {
+    color: #dcdcdc; /* Light grey for readability */
+    font-style: italic;
+    font-size: 1em;
+    margin: 2px 0;
+    padding-left: 10px; /* Slight indentation for alignment */
+    border-left: 3px solid #ffcc00; /* Highlight with a left border */
+}
