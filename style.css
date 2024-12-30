@@ -657,7 +657,7 @@ body {
 
 #daa {
     background-image: url('https://cdn.activestate.com/wp-content/uploads/2018/10/blog-17-11-02-accel-algorithms-1200x675.png');
-    background-size: 50px 50px; /* Adjust width and height of the background image */
+    background-size: 120px 120px; /* Adjust width and height of the background image */
     background-repeat: no-repeat;
     background-position: center;
     padding: 20px;
