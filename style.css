@@ -645,3 +645,18 @@ tr:hover {
     background-repeat: no-repeat;
     background-position: center;
 }
+
+#daa {
+    height: 100vh; /* Adjust height based on your design */
+    background-image: url('images/daa-background.jpg'); /* Path to the image */
+    background-size: cover; /* Ensure the image covers the section */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent tiling of the image */
+}
+
+#daa .content {
+    color: white; /* Adjust text color for readability */
+    text-align: center; /* Center the text */
+    padding: 20px;
+    position: relative; /* Needed for proper stacking */
+}
