@@ -644,4 +644,14 @@ tr:hover {
 body {
    background: transparent; /* or background: transparent; */
 }
+/* Adjust margin and padding for both sections */
+#daa, #about-course { 
+    margin-bottom: 0; /* Remove bottom margin from DAA section */
+    padding-bottom: 0; /* Remove padding if any */
+}
+
+#about-course {
+    margin-top: 0; /* Remove top margin from About Course section */
+    padding-top: 0; /* Remove padding if any */
+}
 
