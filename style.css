@@ -378,9 +378,4 @@ header .logo span {
     z-index: -1;
 }
 
-body {
-    position: relative; /* Ensure the body is a positioned element */
-    min-height: 100vh; /* Ensure it spans the full viewport */
-    overflow: hidden; /* Prevent unwanted scrollbars */
-}
 
