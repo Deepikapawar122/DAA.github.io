@@ -748,7 +748,7 @@ tr:hover {
     position: relative;
     height: 100vh;
     overflow: hidden;
-    background-image: url('https://cdn.shopify.com/s/files/1/1976/0763/products/Algorithmic_Trading_1024x1024.jpg?v=1531247305.jpg'); /* Replace with your image URL */
+    background-image: url('Algorithmic_Trading_1024x1024.webp.jpg'); /* Replace with your image URL */
     background-size: cover; /* Ensures the image covers the entire section */
     background-position: center; /* Center the image */
     background-repeat: no-repeat; /* Prevents the image from repeating */
