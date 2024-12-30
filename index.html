@@ -1,68 +1,120 @@
-body {
-    margin: 0;
-    font-family: 'Quicksand', sans-serif;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Portfolio</title>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Boxicons -->
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h2 class="logo">Portfo<span>lio</span></h2>
+        <ul class="navbar">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#course_details">About Course</a></li>
+            <li><a href="#project_details">About Project</a></li>
+            <li><a href="#contact">Contact Team</a></li>
+        </ul>
+    </header>
 
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    background-color: #222;
-    color: white;
-}
+    <!-- Home Section -->
+    <section class="home" id="home">
+        <video autoplay loop muted plays-inline class="back-video">
+            <source src="your_video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="home-text">
+            <h1>DAA</h1>
+            <h4>Design and Analysis of Algorithms Portfolio</h4>
+        </div>
+    </section>
 
-header .logo {
-    font-size: 1.5rem;
-    font-weight: bold;
-}
+    <!-- About Course Section -->
+    <section class="course_details" id="course_details">
+        <div class="course_details-text">
+            <h2>About Course</h2>
+            <h4>Design and Analysis of Algorithms</h4>
+            <p>This course introduces the fundamental principles of designing and analyzing efficient algorithms...</p>
+            <table border="1" cellspacing="0" cellpadding="10">
+                <thead>
+                    <tr>
+                        <th>Topic</th>
+                        <th>Details</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>1. Foundations</strong></td>
+                        <td>Design Philosophy, Space and Time Complexities, Problem patterns like recursion, etc.</td>
+                    </tr>
+                    <!-- Add more rows as needed -->
+                </tbody>
+            </table>
+        </div>
+    </section>
 
-header .navbar {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-}
+    <!-- About Project Section -->
+    <section class="project_details" id="project_details">
+        <div class="project_details-text">
+            <h2>About Project</h2>
+            <h4>Problem Statement</h4>
+            <p>The project focuses on advanced e-transportation platforms...</p>
+            <ul>
+                <li><strong>BRTS Ticket Scanning:</strong> Verifying tickets using QR codes, RFID, etc.</li>
+                <li><strong>Traffic Signal Control:</strong> Adaptive real-time signal systems.</li>
+                <li><strong>Shortest Distance Between Stops:</strong> Graph algorithms for route optimization.</li>
+            </ul>
+        </div>
+    </section>
 
-header .navbar a {
-    text-decoration: none;
-    color: white;
-}
+    <!-- Position of Responsibilities (POR) Section -->
+    <section class="POR" id="POR">
+        <div class="main-text">
+            <h2>Position of Responsibilities</h2>
+            <div class="portfolio-content">
+                <div class="row">
+                    <img src="img/speaker.jpg" alt="GFG Speaker">
+                    <h3>President - GFG College Chapter</h3>
+                </div>
+                <div class="row">
+                    <img src="img/chess.jpg" alt="Chess Coordinator">
+                    <h3>Coordinator - Chess Club</h3>
+                </div>
+            </div>
+        </div>
+    </section>
 
-section {
-    padding: 40px 20px;
-}
-
-.course_details h2,
-.project_details h2,
-.contact h2 {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.team-container {
-    display: flex;
-    gap: 20px;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-.team-member {
-    text-align: center;
-    max-width: 200px;
-}
-
-.team-image {
-    width: 100%;
-    border-radius: 50%;
-}
-
-.social-icons a {
-    margin: 0 5px;
-    font-size: 1.2rem;
-    color: #333;
-    text-decoration: none;
-}
-
-.social-icons a:hover {
-    color: #0077b5; /* LinkedIn blue for LinkedIn links */
-}
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="contact-text">
+            <h2>Contact Our Team</h2>
+            <div class="team-container">
+                <!-- Team Member 1 -->
+                <div class="team-member">
+                    <img src="deepika.jpg" alt="Deepika" class="team-image">
+                    <h4>Deepika R P</h4>
+                    <p>Business Case:</p>
+                    <div class="social-icons">
+                        <a href="https://www.linkedin.com/in/deepika-pawar-110a38310/" target="_blank">
+                            <i class='bx bxl-linkedin'></i>
+                        </a>
+                        <a href="https://github.com/deepikapawar" target="_blank">
+                            <i class='bx bxl-github'></i>
+                        </a>
+                        <a href="mailto:deepikapawar381@gmail.com" target="_blank">
+                            <i class='bx bx-envelope'></i>
+                        </a>
+                    </div>
+                </div>
+                <!-- Add more team members as needed -->
+            </div>
+        </div>
+    </section>
+</body>
+</html>
