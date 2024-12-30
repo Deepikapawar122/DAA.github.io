@@ -639,24 +639,11 @@ tr:hover {
 .next-btn {
     right: 0;
 }
-.home {
-    background-image: url('https://wallpapercave.com/wp/wp3621208.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
-#daa {
-    height: 100vh; /* Adjust height based on your design */
-    background-image: url('images/daa-background.jpg'); /* Path to the image */
-    background-size: cover; /* Ensure the image covers the section */
-    background-position: center; /* Center the image */
-    background-repeat: no-repeat; /* Prevent tiling of the image */
-}
-
-#daa .content {
-    color: white; /* Adjust text color for readability */
-    text-align: center; /* Center the text */
-    padding: 20px;
-    position: relative; /* Needed for proper stacking */
+body {
+    background-image: url('https://wallpapercave.com/wp/wp3621208.jpg'); /* Path to your image */
+    background-size: cover; /* Ensures the image covers the entire background */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    background-attachment: fixed; /* Keeps the image fixed during scrolling */
+    background-position: center; /* Centers the image */
+    font-family: 'Quicksand', sans-serif; /* Optional: Set a font */
 }
