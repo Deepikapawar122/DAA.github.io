@@ -641,9 +641,7 @@ tr:hover {
 }
 
 
-body {
-   background: transparent; /* or background: transparent; */
-}
+
 /* Adjust margin and padding for both sections */
 #daa, #about-course { 
     margin-bottom: 0; /* Remove bottom margin from DAA section */
@@ -674,17 +672,6 @@ body {
     background-image: url('https://wallpapercave.com/wp/wp3621208.jpg'); /* Fallback background */
     background-size: cover; /* Ensure the image covers the area */
     background-position: center;
-}
-
-/* Background Video */
-.back-video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Scale the video properly */
-    z-index: -1; /* Ensure the video stays behind content */
 }
 
 /* Text Styling */
