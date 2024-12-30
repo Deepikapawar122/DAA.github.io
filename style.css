@@ -649,3 +649,22 @@ tr:hover {
     padding-left: 10px; /* Slight indentation for alignment */
     border-left: 3px solid #ffcc00; /* Highlight with a left border */
 }
+/* Apply black color to all text inside .business-cases */
+.business-cases {
+    color: black; /* Make all text inside business-cases black */
+}
+
+.business-cases h2 {
+    color: black; /* Make the Business Cases heading black */
+}
+
+.business-cases h3 {
+    color: black; /* Make the Business Case titles black */
+}
+
+.business-cases p,
+.business-cases li,
+.business-cases h4,
+.business-cases pre {
+    color: black; /* Make all paragraphs, list items, and code text black */
+}
