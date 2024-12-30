@@ -306,7 +306,7 @@ contact.team-image {
     list-style: none;
     padding: 0;
     margin: 20px 0;
-    text-align: left;
+    text-align: center;
     max-width: 800px;
     margin: 0 auto;
 }
@@ -367,7 +367,7 @@ contact.team-image {
 
     .colorful-table th, .colorful-table td {
         padding: 12px 20px;
-        text-align: left;
+        text-align: centre;
         font-size: 1rem;
         border: 1px solid #e0e0e0; /* Light gray borders */
     }
