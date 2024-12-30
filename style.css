@@ -416,20 +416,22 @@ contact.team-image {
 
 
 <style>
-    /* Overall Learning Reflections Section */
+    /* Learning Reflections Section */
     .learning-reflections {
-        margin: 50px auto;
         max-width: 900px;
+        margin: 50px auto;
         padding: 20px;
-        font-family: Arial, sans-serif;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     }
 
     h1 {
-        text-align: center;
         font-size: 2.5rem;
-        font-weight: bold;
-        margin-bottom: 20px;
         color: #2c3e50;
+        text-align: center;
+        margin-bottom: 20px;
     }
 
     p {
@@ -437,6 +439,7 @@ contact.team-image {
         font-size: 1.2rem;
         color: #7f8c8d;
         margin-bottom: 30px;
+        line-height: 1.6;
     }
 
     /* Table Styling */
@@ -445,11 +448,11 @@ contact.team-image {
         border-collapse: collapse;
         border-radius: 8px;
         overflow: hidden;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
     }
 
     .learning-table th, .learning-table td {
-        padding: 20px;
+        padding: 15px;
         text-align: left;
         font-size: 1.1rem;
         border: 1px solid #ddd;
@@ -458,79 +461,43 @@ contact.team-image {
     .learning-table th {
         background-color: #3498db; /* Vibrant blue */
         color: white;
-        text-transform: uppercase;
         font-weight: bold;
+        text-transform: uppercase;
     }
 
     .learning-table td {
-        background-color: #ecf0f1; /* Light gray */
+        background-color: #ecf0f1; /* Light grey */
         color: #2c3e50;
     }
 
     .learning-table tr:nth-child(even) td {
-        background-color: #f9f9f9; /* Soft light gray */
+        background-color: #f9f9f9; /* Lighter grey */
     }
 
     .learning-table tr:nth-child(odd) td {
-        background-color: #f0f8ff; /* Soft light blue */
+        background-color: #f0f8ff; /* Light blue */
     }
 
+    /* Hover Effects */
     .learning-table tr:hover td {
-        background-color: #f39c12; /* Vibrant yellow on hover */
+        background-color: #f39c12; /* Yellow */
         color: white;
         transition: background-color 0.3s ease;
     }
 
     .learning-table td strong {
-        color: #3498db; /* Vibrant blue for headings */
+        color: #3498db; /* Blue for headings */
     }
 
-    /* Specific Row Coloring */
+    /* Row Specific Coloring */
     .row-1 td {
-        background-color: #ffe6e6; /* Soft red */
+        background-color: #ffe6e6; /* Soft Red */
     }
     .row-2 td {
-        background-color: #d6f5d6; /* Soft green */
+        background-color: #d6f5d6; /* Soft Green */
     }
     .row-3 td {
-        background-color: #ffffcc; /* Soft yellow */
+        background-color: #ffffcc; /* Soft Yellow */
     }
-    .row-4 td {
-        background-color: #e6f7ff; /* Soft blue */
-    }
-    .row-5 td {
-        background-color: #f9d6e5; /* Soft pink */
-    }
-    .row-6 td {
-        background-color: #f1f0f0; /* Soft grey */
-    }
-    .row-7 td {
-        background-color: #e6ffe6; /* Light green */
-    }
-    .row-8 td {
-        background-color: #ffecb3; /* Soft amber */
-    }
-    .row-9 td {
-        background-color: #e6e6fa; /* Lavender */
-    }
-    .row-10 td {
-        background-color: #fff2cc; /* Pale yellow */
-    }
-    .row-11 td {
-        background-color: #d9f7e9; /* Mint green */
-    }
-    .row-12 td {
-        background-color: #ffb3b3; /* Soft red */
-    }
-    .row-13 td {
-        background-color: #f0f8ff; /* Light azure */
-    }
-    .row-14 td {
-        background-color: #fff5e6; /* Cream */
-    }
-    .row-15 td {
-        background-color: #f2d9ff; /* Light purple */
-    }
-
+    /* Add additional row styling as needed */
 </style>
-
