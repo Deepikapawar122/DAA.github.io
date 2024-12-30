@@ -1,4 +1,4 @@
-/* Basic Styles */
+* Basic Styles */
 body {
     font-family: 'Times New Roman', Times, serif;
     background-color: #f4f4f4;
@@ -641,7 +641,9 @@ tr:hover {
 }
 
 
-
+body {
+   background: transparent; /* or background: transparent; */
+}
 /* Adjust margin and padding for both sections */
 #daa, #about-course { 
     margin-bottom: 0; /* Remove bottom margin from DAA section */
@@ -651,32 +653,4 @@ tr:hover {
 #about-course {
     margin-top: 0; /* Remove top margin from About Course section */
     padding-top: 0; /* Remove padding if any */
-}
-
-#daa {
-    background-image: url('https://cdn.activestate.com/wp-content/uploads/2018/10/blog-17-11-02-accel-algorithms-1200x675.png');
-    background-size: 120px 120px; /* Adjust width and height of the background image */
-    background-repeat: no-repeat;
-    background-position: center;
-    padding: 20px;
-}
-/* Home Section */
-.home {
-    position: relative;
-    width: 100%;
-    height: 100vh; /* Full viewport height */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden; /* Ensure no scrollbars appear */
-    background-image: url('https://wallpapercave.com/wp/wp3621208.jpg'); /* Fallback background */
-    background-size: cover; /* Ensure the image covers the area */
-    background-position: center;
-}
-
-/* Text Styling */
-.home-text-h2 {
-    text-align: center;
-    color: white;
-    z-index: 1; /* Ensure the text is above the video */
 }
