@@ -327,6 +327,6 @@ header .logo span {
 .home-text-h2 h1 {
     font-size: 5rem; /* Adjust the size as per your preference */
     font-weight: bold; /* Optional for better emphasis */
-    /* Optional for centering */
+    text-align: left;/* Optional for centering */
 }
 
