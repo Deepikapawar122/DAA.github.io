@@ -408,23 +408,7 @@ tr:hover {
     color: #4CAF50;
 }
 
-.learning-circle {
-    width: 120px; /* Increase the size of the circle */
-    height: 120px; /* Increase the size of the circle */
-    line-height: 120px; /* Center the text vertically */
-    border-radius: 50%; /* Make it a circle */
-    background-color: #4CAF50; /* Green background */
-    color: white; /* White text */
-    text-align: center; /* Center the text horizontally */
-    font-size: 18px; /* Larger text size */
-    margin: 15px; /* Space between circles */
-    display: inline-block;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for depth */
-}
 
-.learning-circle:hover {
-    background-color: #45a049; /* Darker green on hover */
-}
 
 
 /* Portfolio Section */
@@ -487,4 +471,80 @@ tr:hover {
 .portfolio-item:hover {
     transform: translateY(-5px);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Learning Outcomes Section */
+.learning-outcomes {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #f4f6f9;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Header Styling */
+.learning-outcomes h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 40px;
+    color: #2c3e50;
+}
+
+/* Cards Container */
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 0 20px;
+}
+
+/* Individual Card Styling */
+.card {
+    background: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+/* Hover Effect on Cards */
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Icon Styling */
+.card .icon {
+    background: linear-gradient(135deg, #3498db, #8e44ad);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 20px;
+    color: #fff;
+    font-size: 1.5rem;
+}
+
+/* Card Title */
+.card h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #2c3e50;
+}
+
+/* Card Description */
+.card p {
+    font-size: 1rem;
+    color: #7f8c8d;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .cards-container {
+        grid-template-columns: 1fr; /* Stacks cards on small screens */
+    }
 }
