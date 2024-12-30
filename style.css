@@ -655,3 +655,10 @@ body {
     padding-top: 0; /* Remove padding if any */
 }
 
+#daa {
+    background-image: url('https://img.freepik.com/free-photo/3d-rendered-background-with-matrix-style-design_1048-5645.jpg?t=st=1735578890~exp=1735582490~hmac=70fd2a7f9d04b73e0587a121d1ceaa89f052cf33082bdafc9646d63f1c87b6c8&w=740.jpg');
+    background-size: 150px 150px; /* Adjust width and height of the background image */
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 20px;
+}
