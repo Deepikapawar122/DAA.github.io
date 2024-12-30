@@ -360,45 +360,45 @@ contact.team-image {
         width: 100%;
         border-collapse: collapse;
         margin-top: 20px;
-        border-radius: 10px;
+        border-radius: 8px;
         overflow: hidden;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     }
 
     .colorful-table th, .colorful-table td {
         padding: 12px 20px;
         text-align: left;
         font-size: 1rem;
-        border: 1px solid #ddd;
+        border: 1px solid #e0e0e0; /* Light gray borders */
     }
 
     .colorful-table th {
-        background-color: #ff6347; /* Tomato Red */
+        background-color: #4CAF50; /* Soft Green */
         color: white;
         font-weight: bold;
         text-transform: uppercase;
     }
 
     .colorful-table td {
-        background-color: #f9f9f9;
+        background-color: #f9f9f9; /* Light Gray */
         color: #333;
     }
 
     .colorful-table tr:nth-child(even) td {
-        background-color: #e0f7fa; /* Light Cyan */
+        background-color: #e3f2fd; /* Light Blue */
     }
 
     .colorful-table tr:nth-child(odd) td {
-        background-color: #f1f8e9; /* Light Green */
+        background-color: #f1f8e9; /* Light Greenish-Gray */
     }
 
     .colorful-table tr:hover td {
-        background-color: #ffeb3b; /* Yellow on hover */
+        background-color: #c8e6c9; /* Soft Green on hover */
         transition: background-color 0.3s ease;
     }
 
     .colorful-table td strong {
-        color: #ff6347; /* Tomato Red */
+        color: #388e3c; /* Dark Green for strong text */
     }
 
     .colorful-table td p {
