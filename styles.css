@@ -14,7 +14,7 @@ h1 {
     font-family: 'Montserrat', sans-serif; /* Font style */
     font-size: 6rem; /* Font size of the heading */
     font-weight: bold;
-    color: #ffffff; /* Text color */
+    color: #ff4500; /* New font color (orange-red) */
     letter-spacing: 5px; /* Letter spacing */
     text-align: center;
     text-transform: uppercase; /* Uppercase text */
