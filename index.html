@@ -387,272 +387,79 @@
          <div class="project-detail">
             <div class="icon-title">
                 <i class="fas fa-tasks"></i>
-                <h2>Business Case 1</h2>
-               
-            </div>
-            <ul>
                 
-                <h3><span>Traffic Signal Control</span></h3>
-                <p>Description: Implement intelligent traffic signal systems that adapt to real-time traffic flow, reducing congestion and travel delays.</p>
-    <p>Functionalities:</p>
-      <p> - Regulates signal timing to minimize delays and maximize traffic movement efficiency..</p>
-      <p> -Reduces accident risks by controlling vehicle and pedestrian interactions at intersections.</p>
-      <p> -Allows priority for emergency vehicles, public transit, or pedestrians when needed.</p>
-     <p> - Adjusts signal timing dynamically based on real-time traffic conditions.
-</p>
-                <li></li>
-               
-            </ul>
-       </div>
        
 
-    <!-- Full Code Implementation Block -->
-   <div class="block" data-aos="fade-up">
-    <h2>Full Code Implementation (C++) - Business Case 1</h2>
-    <div class="code-editor">
-        <button class="run-btn" onclick="simulateCodeRunBC1()">Run Code</button>
-        <pre><code class="cpp">
-#include <iostream>
-#include <queue>
-#include <thread>
-#include <chrono>
+    
+    
+    
+
+    
+
+<!-- Business Case 1 -->
+        <div class="business-case">
+            <h3>Business Case 1: Traffic Signal Control</h3>
+            <p>Description: Implement intelligent traffic signal systems that adapt to real-time traffic flow, reducing congestion and travel delays.</p>
+            <p><strong>Functionalities:</strong></p>
+            <ul>
+                <li>Regulates signal timing to minimize delays and maximize traffic movement efficiency.</li>
+                <li>Reduces accident risks by controlling vehicle and pedestrian interactions at intersections.</li>
+                <li>Allows priority for emergency vehicles, public transit, or pedestrians when needed.</li>
+                <li>Adjusts signal timing dynamically based on real-time traffic conditions.</li>
+            </ul>
+            <pre><code>
+#include &lt;iostream&gt;
+#include &lt;queue&gt;
+#include &lt;thread&gt;
+#include &lt;chrono&gt;
 
 using namespace std;
 
-class TrafficSignalControl {
-private:
-    queue<int> northQueue, southQueue, eastQueue, westQueue;
-    int greenTime = 3;
+class TrafficSignalControl { 
+// [Insert C++ code for Traffic Signal Control here] 
+}; 
 
-public:
-    void addVehicleToQueue(int direction) {
-        if (direction == 0) northQueue.push(1);
-        if (direction == 1) southQueue.push(1);
-        if (direction == 2) eastQueue.push(1);
-        if (direction == 3) westQueue.push(1);
-    }
-
-    void processTraffic(int cycles) {
-        for (int i = 0; i < cycles; ++i) {
-            processDirection(northQueue, "North");
-            processDirection(southQueue, "South");
-            processDirection(eastQueue, "East");
-            processDirection(westQueue, "West");
-            this_thread::sleep_for(chrono::seconds(1));
-        }
-    }
-
-private:
-    void processDirection(queue<int>& q, string direction) {
-        if (!q.empty()) {
-            cout << direction << " green for " << greenTime << " seconds.\n";
-            for (int i = 0; i < greenTime && !q.empty(); ++i) {
-                q.pop();
-                cout << "Vehicle passed through " << direction << " signal.\n";
-            }
-        } else {
-            cout << "No vehicles at " << direction << " signal.\n";
-        }
-    }
-};
-
-int main() {
-    TrafficSignalControl tsc;
-
-    tsc.addVehicleToQueue(0);  // North
-    tsc.addVehicleToQueue(0);  // North
-    tsc.addVehicleToQueue(1);  // South
-    tsc.addVehicleToQueue(2);  // East
-    tsc.addVehicleToQueue(3);  // West
-
-    // Process traffic for a fixed number of cycles (e.g., 3)
-    tsc.processTraffic(3);
-
-    return 0;
+int main() { 
+    TrafficSignalControl tsc; 
+    tsc.addVehicleToQueue(0); 
+    tsc.processTraffic(); 
+    return 0; 
 }
-
-    // Output the shortest distance
-    cout <<" North green for 3 seconds.
-Vehicle passed through North signal.
-Vehicle passed through North signal.
-No vehicles at North signal.
-South green for 3 seconds.
-Vehicle passed through South signal.
-No vehicles at South signal.
-East green for 3 seconds.
-Vehicle passed through East signal.
-No vehicles at East signal.
-West green for 3 seconds.
-Vehicle passed through West signal.
-No vehicles at West signal.
-\n";
-
-         </code></pre>
-    </div>
-    <div id="outputBC1" class="output"></div>
-</div>
- <!--   </div>  -->
- <!-- </section> -->
-
-  <li></li>
-
- <script>
- function simulateCodeRunBC1() {
-    document.getElementById('outputBC1').innerHTML = `
-    Simulated Output: Shortest Distance from Stop 0 to Stop 9: 12 units.<br>
-    Path: 0 -> 1 -> 3 -> 8 -> 9
-    `;
-}
-</script>
-
- <div class="project-detail">
-            <div class="icon-title">
-                <i class="fas fa-tasks"></i>
-                <h2>Business Case 2</h2>
-               
-            </div>
-            <ul>
-                
-                <h3><span>Booked Ticket Search.</span></h3>
-                <p>Description: A search system to allow users to retrieve previously booked ticket details.</p>
-   <p>Functionalities:</p>
-    <p> - Search by ticket ID, user name, or travel date.</p>
-    <p> - Sorting and filtering of search results.</p>
-    <p> - Integration with booking and validation systems.</p>
-    <p> - Display of ticket details and status (e.g., confirmed, canceled).</p>
-                <li></li>
-            </ul>
+            </code></pre>
         </div>
-       
-    </div>
 
- <!-- Full Code Implementation Block -->
-      <div class="block" data-aos="fade-up">
-    <h2>Full Code Implementation (C++) - Business Case 2</h2>
-    <div class="code-editor">
-        <button class="run-btn" onclick="simulateCodeRunBC2()">Run Code</button>
-        <pre><code class="cpp">
-#include <iostream>
-#include <vector>
-#include <string>
+        <!-- Business Case 2 -->
+        <div class="business-case">
+            <h3>Business Case 2: Transportation of Trash</h3>
+            <p>Description: Optimize trash transportation routes to minimize distance and cost, enabling efficient waste management.</p>
+            <p><strong>Functionalities:</strong></p>
+            <ul>
+                <li>Collection: Gather waste from residential, commercial, and industrial sources.</li>
+                <li>Sorting: Separate recyclable, hazardous, and organic materials for proper processing.</li>
+                <li>Transportation: Safely move waste to disposal, recycling, or treatment facilities.</li>
+                <li>Disposal: Ensure environmentally safe disposal in landfills or incinerators.</li>
+                <li>Efficiency: Optimize routes and methods to minimize costs and environmental impact.</li>
+            </ul>
+            <pre><code>
+#include &lt;iostream&gt;
+#include &lt;vector&gt;
+#include &lt;cmath&gt;
+#include &lt;climits&gt;
 
 using namespace std;
 
-// Function to compute the LPS (Longest Prefix Suffix) array for KMP algorithm
-vector<int> computeLPSArray(const string &pattern) {
-    int m = pattern.length();
-    vector<int> lps(m, 0);
-    int length = 0; // Length of the previous longest prefix suffix
-    int i = 1;
-
-    while (i < m) {
-        if (pattern[i] == pattern[length]) {
-            length++;
-            lps[i] = length;
-            i++;
-        } else {
-            if (length != 0) {
-                length = lps[length - 1];
-            } else {
-                lps[i] = 0;
-                i++;
-            }
-        }
-    }
-    return lps;
+int tsp(int current, int visited, ... ) { 
+// [Insert C++ code for Transportation of Trash here] 
 }
-
-// KMP String Matching Algorithm
-bool KMPSearch(const string &text, const string &pattern) {
-    int n = text.length();
-    int m = pattern.length();
-    vector<int> lps = computeLPSArray(pattern);
-
-    int i = 0; // Index for text
-    int j = 0; // Index for pattern
-    while (i < n) {
-        if (pattern[j] == text[i]) {
-            i++;
-            j++;
-        }
-        if (j == m) {
-            return true; // Pattern found in text
-        } else if (i < n && pattern[j] != text[i]) {
-            if (j != 0) {
-                j = lps[j - 1];
-            } else {
-                i++;
-            }
-        }
-    }
-    return false;
+int main() { 
+    vector<pair&lt;int, int&gt;> locations = {{0, 0}, {10, 2}}; 
+    int minCost = tsp(0, 1, ... ); 
+    cout &lt;&lt; "Cost: " &lt;&lt; minCost; 
+    return 0; 
 }
+            </code></pre>
+        </div>
 
-// Structure to store ticket details
-struct Ticket {
-    string ticketID;
-    string userName;
-    string travelDate;
-    string status; // e.g., confirmed, canceled
-};
-
-// Function to search tickets
-void searchTickets(const vector<Ticket> &tickets, const string &query) {
-    cout << "Search Results for \"" << query << "\":\n";
-    bool found = false;
-
-    for (const auto &ticket : tickets) {
-        if (KMPSearch(ticket.ticketID, query) || KMPSearch(ticket.userName, query) || KMPSearch(ticket.travelDate, query)) {
-            found = true;
-            cout << "Ticket ID: " << ticket.ticketID << "\n"
-                 << "User Name: " << ticket.userName << "\n"
-                 << "Travel Date: " << ticket.travelDate << "\n"
-                 << "Status: " << ticket.status << "\n\n";
-        }
-    }
-
-    if (!found) {
-        cout << "No tickets match the search query.\n";
-    }
-}
-
-int main() {
-    // Sample ticket data
-   // Sample ticket data
-    vector<Ticket> tickets = {
-        {"T12345", "Nisha", "2024-12-01", "Confirmed"},
-        {"T67890", "Deepika", "2024-12-15", "Canceled"},
-        {"T54321", "Namrutha", "2024-12-20", "Confirmed"},
-        {"T98765", "Sinchana", "2024-12-25", "Confirmed"}
-    };
-
-    // Hardcoded search query
-    string query = "Alice";
-
-    searchTickets(tickets, query);
-
-    return 0;
-}
-
-        </code></pre>
-    </div>
-    <div id="outputBC2" class="output"></div>
-</div>
-   <!-- </div> -->
-  <!-- </section> -->
-
-  <li></li>
-
- <script>
-  function simulateCodeRunBC2() {
-    document.getElementById('outputBC2').innerHTML = `
-    Simulated Output: Search Results for "Nisha":<br>
-    Ticket ID: T12345<br>
-    User Name: Nisha<br>
-    Travel Date: 2024-12-01<br>
-    Status: Confirmed
-    `;
-}
 </script>
 </section>
 
