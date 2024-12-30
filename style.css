@@ -137,7 +137,7 @@ header .logo span {
     justify-content: space-around;
     flex-wrap: wrap;
 }
-.team-image {
+.contact .team-image {
     width: 100px;               /* Set the diameter of the circular image */
     height: 100px;              /* Ensure height matches width for a perfect circle */
     border-radius: 50%;         /* Make the image circular */
