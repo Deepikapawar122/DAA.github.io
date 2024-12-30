@@ -640,31 +640,28 @@ tr:hover {
 .next-btn {
     right: 0;
 }
-/* Styling for each Business Case */
-.business-case {
-    color: #dcdcdc; /* Light grey for readability */
-    font-style: italic;
-    font-size: 1em;
-    margin: 2px 0;
-    padding-left: 10px; /* Slight indentation for alignment */
-    border-left: 3px solid #ffcc00; /* Highlight with a left border */
-}
 /* Apply black color to all text inside .business-cases */
 .business-cases {
-    color: black; /* Make all text inside business-cases black */
+    color: black !important; /* Force text color to black */
 }
 
-.business-cases h2 {
-    color: black; /* Make the Business Cases heading black */
-}
-
-.business-cases h3 {
-    color: black; /* Make the Business Case titles black */
-}
-
+/* Ensure all headings, paragraphs, list items, and other text are black */
+.business-cases h2,
+.business-cases h3,
 .business-cases p,
 .business-cases li,
 .business-cases h4,
 .business-cases pre {
-    color: black; /* Make all paragraphs, list items, and code text black */
+    color: black !important; /* Use !important to override any inline styles */
 }
+
+/* Ensure the code text within <pre> is black */
+.business-cases pre {
+    color: black !important;
+    background-color: #f4f4f4; /* Optional: To add a light background for better code visibility */
+    padding: 10px;
+    border-radius: 5px;
+}
+
+}
+
