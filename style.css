@@ -680,3 +680,66 @@ tr:hover {
     border-left: 3px solid #ffcc00; /* Highlight with a left border */
 }
 
+/* Apply a light background color to the business cases section */
+.business-cases {
+    background-color: #ffffff; /* White background for clear visibility */
+    color: black !important; /* Make sure text color is black */
+    padding: 20px; /* Add padding for spacing */
+    border-radius: 10px; /* Optional: rounded corners for a cleaner look */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: subtle shadow for better contrast */
+}
+
+/* Make sure all headings, paragraphs, and list items have black text */
+.business-cases h2,
+.business-cases h3,
+.business-cases p,
+.business-cases li,
+.business-cases h4,
+.business-cases pre {
+    color: black !important; /* Use !important to override any inline styles */
+}
+
+/* Ensure the code text inside <pre> is black */
+.business-cases pre {
+    color: black !important; /* Ensures code is visible */
+    background-color: #f4f4f4; /* Light background for code block */
+    padding: 10px;
+    border-radius: 5px;
+    font-family: 'Courier New', Courier, monospace; /* Monospace font for code */
+    white-space: pre-wrap; /* Allows long lines to wrap inside code block */
+}
+
+/* Apply styling to make the list items more readable */
+.business-cases ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+/* Increase font size for better readability */
+.business-cases p,
+.business-cases li,
+.business-cases h3,
+.business-cases h4 {
+    font-size: 16px;
+}
+
+/* Make the title of Business Case more prominent */
+.business-cases h3 {
+    font-size: 20px;
+    font-weight: bold;
+    color: #e87e7e; /* You can change this to any color you prefer */
+}
+
+/* Optional: Add hover effect on buttons */
+.run-btn {
+    padding: 10px 20px;
+    background-color: #f39072;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.run-btn:hover {
+    background-color: #e87e7e;
+}
