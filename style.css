@@ -362,3 +362,49 @@ tr:nth-child(even) {
 tr:hover {
     background-color: #d9e3f0;
 }
+
+.content-box {
+    background-color: #f9f9f9;
+    border: 2px solid #ddd;
+    padding: 30px;
+    margin: 20px auto;
+    width: 300px; /* Adjust the size of the circle */
+    height: 300px; /* Adjust the size of the circle */
+    border-radius: 50%; /* Make it circular */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Center the text inside */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.content-box h2 {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.content-box ul {
+    list-style-type: none;
+    padding: 0;
+    overflow-y: auto; /* Allows scrolling if the list overflows */
+    max-height: 180px; /* Limit the height of the list */
+}
+
+.content-box ul li {
+    font-size: 14px;
+    margin-bottom: 10px;
+    padding-left: 20px;
+    position: relative;
+    text-align: left; /* Align the text to the left */
+}
+
+.content-box ul li::before {
+    content: "✔";
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #4CAF50;
+}
+
