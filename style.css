@@ -641,7 +641,7 @@ tr:hover {
 }
 body {
     background-image: url('https://wallpapercave.com/wp/wp3621208.jpg'); /* Path to your image */
-    background-size: cover; /* Ensures the image covers the entire background */
+    background-size: 50% 50%r; /* Ensures the image covers the entire background */
     background-repeat: no-repeat; /* Prevents the image from repeating */
     background-attachment: fixed; /* Keeps the image fixed during scrolling */
     background-position: center; /* Centers the image */
