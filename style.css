@@ -585,3 +585,57 @@ tr:hover {
         height: 70vh;
     }
 }
+/* Basic styling for the slide container */
+.slide-container {
+    position: relative;
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    min-width: 100%;
+    box-sizing: border-box;
+    padding: 20px;
+    text-align: center;
+    background: #f4f4f4;
+    border: 1px solid #ddd;
+    margin: 10px 0;
+}
+
+.slide h3 {
+    font-size: 1.5rem;
+    color: #2196F3;
+}
+
+.slide p {
+    font-size: 1rem;
+    color: #333;
+}
+
+/* Navigation Buttons */
+.nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    font-size: 2rem;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 10;
+}
+
+.prev-btn {
+    left: 0;
+}
+
+.next-btn {
+    right: 0;
+}
