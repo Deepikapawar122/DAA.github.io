@@ -384,36 +384,3 @@ body {
     overflow: hidden; /* Prevent unwanted scrollbars */
 }
 
-body::before {
-    content: "DAA";
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 150px; /* Adjust size as needed */
-    color: rgba(200, 200, 200, 0.2); /* Light gray with transparency */
-    z-index: -1; /* Ensure it's behind all content */
-    font-weight: bold;
-    pointer-events: none; /* Prevent interaction */
-    white-space: nowrap; /* Prevent text wrapping */
-}
-body {
-    position: relative; /* Ensure the body is a positioned element */
-    min-height: 100vh; /* Ensure it spans the full viewport */
-    overflow: hidden; /* Prevent unwanted scrollbars */
-}
-
-body::before {
-    content: "DAA";
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 150px; /* Adjust size as needed */
-    color: rgba(200, 200, 200, 0.2); /* Light gray with transparency */
-    z-index: -1; /* Ensure it's behind all content */
-    font-weight: bold;
-    pointer-events: none; /* Prevent interaction */
-    white-space: nowrap; /* Prevent text wrapping */
-}
-
