@@ -20,32 +20,34 @@ header {
     align-items: center;
     background-color: #333;
     color: white;
-    padding: 10px 20px; /* Reduced padding */
+    padding: 20px 40px;
 }
 
 header .logo {
-    font-size: 24px; /* Reduced font size */
+    font-size: 28px;
 }
 
 header .logo span {
     color: #f7c04a;
 }
 
-.navbar{
+.navbar {
+    list-style: none;
     display: flex;
 }
-.navbar a{
-    color: var(--text-color);
-    font-size: var(--p-font);
-    font-weight: bold;
-    padding: 10px 25px;
-    margin: 0 2px;
-    border-radius: 0.5rem;
-    transition: all .40s ease;
+
+.navbar li {
+    margin: 0 15px;
 }
-.navbar a:hover{
-    background: var(--main-color);
-    color: var(--text-color);
+
+.navbar li a {
+    color: white;
+    font-weight: 500;
+    font-size: 25px;
+}
+
+.navbar li a:hover {
+    color: #f7c04a;
 }
 
 /* Course Details Section */
@@ -406,6 +408,9 @@ tr:hover {
     color: #4CAF50;
 }
 
+
+
+
 /* Portfolio Section */
 .portfolio {
     position: relative;
@@ -443,11 +448,235 @@ tr:hover {
     margin-bottom: 30px;
     font-weight: bold;
     text-transform: uppercase;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Text shadow for better readability */
 }
 
-.portfolio-content h4 {
-    font-size: 1.8rem;
-    color: #f7c04a;
-    margin-bottom: 30px;
+/* Portfolio Items Styling */
+.portfolio-items {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.portfolio-item {
+    background-color: rgba(255, 255, 255, 0.8); /* Light background for each item */
+    padding: 20px;
+    border-radius: 10px;
+    margin: 15px;
+    width: 23%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.portfolio-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Learning Outcomes Section */
+.learning-outcomes {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #f4f6f9;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Header Styling */
+.learning-outcomes h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 40px;
+    color: #2c3e50;
+}
+
+/* Cards Container */
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 0 20px;
+}
+
+/* Individual Card Styling */
+.card {
+    background: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+/* Hover Effect on Cards */
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Icon Styling */
+.card .icon {
+    background: linear-gradient(135deg, #3498db, #8e44ad);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 20px;
+    color: #fff;
+    font-size: 1.5rem;
+}
+
+/* Card Title */
+.card h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #2c3e50;
+}
+
+/* Card Description */
+.card p {
+    font-size: 1rem;
+    color: #7f8c8d;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .cards-container {
+        grid-template-columns: 1fr; /* Stacks cards on small screens */
+    }
+}
+/* Style the DAA section */
+#daa {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Style the video to cover the background */
+#daa .video-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+/* Style the content to appear above the video */
+#daa .content {
+    position: relative;
+    z-index: 1;
+    color: white;
+    text-align: center;
+    padding: 50px;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Optional: Make it responsive */
+@media (max-width: 768px) {
+    #daa .content {
+        padding: 20px;
+    }
+    #daa {
+        height: 70vh;
+    }
+}
+/* Basic styling for the slide container */
+.slide-container {
+    position: relative;
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    min-width: 100%;
+    box-sizing: border-box;
+    padding: 20px;
+    text-align: center;
+    background: #f4f4f4;
+    border: 1px solid #ddd;
+    margin: 10px 0;
+}
+
+.slide h3 {
+    font-size: 1.5rem;
+    color: #2196F3;
+}
+
+.slide p {
+    font-size: 1rem;
+    color: #333;
+}
+
+/* Navigation Buttons */
+.nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    font-size: 2rem;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 10;
+}
+
+.prev-btn {
+    left: 0;
+}
+
+.next-btn {
+    right: 0;
+}
+
+
+
+/* Adjust margin and padding for both sections */
+#daa, #about-course { 
+    margin-bottom: 0; /* Remove bottom margin from DAA section */
+    padding-bottom: 0; /* Remove padding if any */
+}
+
+#about-course {
+    margin-top: 0; /* Remove top margin from About Course section */
+    padding-top: 0; /* Remove padding if any */
+}
+
+#daa {
+    background-image: url('https://cdn.activestate.com/wp-content/uploads/2018/10/blog-17-11-02-accel-algorithms-1200x675.png');
+    background-size: 120px 120px; /* Adjust width and height of the background image */
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 20px;
+}
+/* Home Section */
+.home {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Ensure no scrollbars appear */
+    background-image: url('https://wallpapercave.com/wp/wp3621208.jpg'); /* Fallback background */
+    background-size: cover; /* Ensure the image covers the area */
+    background-position: center;
+}
+
+/* Text Styling */
+.home-text-h2 {
+    text-align: center;
+    color: white;
+    z-index: 1; /* Ensure the text is above the video */
 }
