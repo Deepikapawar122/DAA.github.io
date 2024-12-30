@@ -365,103 +365,213 @@
 </section>
 
 
-<!-- Business case -->
-    <section class="course_project" id="business_case">
-    <div class="main-text">
-        <h2>My Business Cases</h2>
-        <h3>Transportation : Enhancing the E-transportation sites and Functionalities</h3>
-    </div>
 
-    <div class="portfolio-content">
-        <div class="project-detail">
-            <div class="icon-title">
-                <i class="fas fa-question-circle"></i>
-                <h3>Problem  Statement</span></h3>
-            </div>
-            <p>
-                The rapid urbanization and increasing demand for efficient public transportation necessitate advanced solutions for e-transportation platforms. These platforms need to integrate smart technologies to enhance user experience, optimize operations, and ensure sustainable transportation practices.
-            </p>
-        </div>
-
-        
-         <div class="project-detail">
-            <div class="icon-title">
-                <i class="fas fa-tasks"></i>
                 
        
 
     
     
-    
+     <!-- Business Cases Section -->
+    <div class="business-cases">
+        <h2 style="text-align: center; color: #f39072;">Business Cases</h2>
 
-    
-
-<!-- Business Case 1 -->
+        <!-- Business Case 1 -->
         <div class="business-case">
-            <h3>Business Case 1: Traffic Signal Control</h3>
-            <p>Description: Implement intelligent traffic signal systems that adapt to real-time traffic flow, reducing congestion and travel delays.</p>
-            <p><strong>Functionalities:</strong></p>
+            <h3 style="color: rgb(232, 126, 126);">Business Case 1:Traffic Signal Control</h3>
+            <p>Description:Implement intelligent traffic signal systems that adapt to real-time traffic flow, reducing congestion and travel delays</p>
             <ul>
-                <li>Regulates signal timing to minimize delays and maximize traffic movement efficiency.</li>
-                <li>Reduces accident risks by controlling vehicle and pedestrian interactions at intersections.</li>
-                <li>Allows priority for emergency vehicles, public transit, or pedestrians when needed.</li>
-                <li>Adjusts signal timing dynamically based on real-time traffic conditions.</li>
-            </ul>
-            <pre><code>
-#include &lt;iostream&gt;
-#include &lt;queue&gt;
-#include &lt;thread&gt;
-#include &lt;chrono&gt;
+                <li>Regulates signal timing to minimize delays and maximize traffic movement efficiency.</li><br>
+                <li>Reduces accident risks by controlling vehicle and pedestrian interactions at intersections.</li><br>
+                <li>Allows priority for emergency vehicles, public transit, or pedestrians when needed.</li><br>
+                <li>Adjusts signal timing dynamically based on real-time traffic conditions.</li><br>
+                            </ul>
+
+            <!-- Code Editor for Business Case 1 -->
+            <div class="code-editor">
+                <h4>Code for Business Case 1</h4>
+                <pre>      #include <iostream>
+#include <queue>
+#include <thread>
+#include <chrono>
 
 using namespace std;
 
-class TrafficSignalControl { 
-// [Insert C++ code for Traffic Signal Control here] 
-}; 
+class TrafficSignalControl {
+private:
+    queue<int> northQueue, southQueue, eastQueue, westQueue;
+    int greenTime = 3;
 
-int main() { 
-    TrafficSignalControl tsc; 
-    tsc.addVehicleToQueue(0); 
-    tsc.processTraffic(); 
-    return 0; 
+public:
+    void addVehicleToQueue(int direction) {
+        if (direction == 0) northQueue.push(1);
+        if (direction == 1) southQueue.push(1);
+        if (direction == 2) eastQueue.push(1);
+        if (direction == 3) westQueue.push(1);
+    }
+
+    void processTraffic() {
+        while (true) {
+            processDirection(northQueue, "North");
+            processDirection(southQueue, "South");
+            processDirection(eastQueue, "East");
+            processDirection(westQueue, "West");
+            this_thread::sleep_for(chrono::seconds(1));
+        }
+    }
+
+private:
+    void processDirection(queue<int>& q, string direction) {
+        if (!q.empty()) {
+            cout << direction << " green for " << greenTime << " seconds.\n";
+            for (int i = 0; i < greenTime && !q.empty(); ++i) {
+                q.pop();
+                cout << "Vehicle passed through " << direction << " signal.\n";
+            }
+        } else {
+            cout << "No vehicles at " << direction << " signal.\n";
+        }
+    }
+};
+
+int main() {
+    TrafficSignalControl tsc;
+
+    tsc.addVehicleToQueue(0);  // North
+    tsc.addVehicleToQueue(0);  // North
+    tsc.addVehicleToQueue(1);  // South
+    tsc.addVehicleToQueue(2);  // East
+    tsc.addVehicleToQueue(3);  // West
+
+    tsc.processTraffic();
+
+    return 0;
 }
-            </code></pre>
+                                          </pre>
+                <button class="run-btn">Run Code</button>
+                <div class="output">
+                    <h4>Output :</h4>
+                    <p>   North green for 3 seconds.
+Vehicle passed through North signal.
+Vehicle passed through North signal.
+No vehicles at North signal.
+
+South green for 3 seconds.
+Vehicle passed through South signal.
+No vehicles at South signal.
+
+East green for 3 seconds.
+Vehicle passed through East signal.
+No vehicles at East signal.
+
+West green for 3 seconds.
+Vehicle passed through West signal.
+No vehicles at West signal.
+
+North green for 3 seconds.
+No vehicles at North signal.
+
+South green for 3 seconds.
+No vehicles at South signal.
+
+East green for 3 seconds.
+No vehicles at East signal.
+
+West green for 3 seconds.
+No vehicles at West signal.
+...
+                     </p>
+                </div>
+            </div>
         </div>
+        <br><br><br>
 
         <!-- Business Case 2 -->
         <div class="business-case">
-            <h3>Business Case 2: Transportation of Trash</h3>
+            <h3 style="color: rgb(232, 126, 126);">Business Case 2: Transportation of Trash</h3>
             <p>Description: Optimize trash transportation routes to minimize distance and cost, enabling efficient waste management.</p>
-            <p><strong>Functionalities:</strong></p>
             <ul>
-                <li>Collection: Gather waste from residential, commercial, and industrial sources.</li>
-                <li>Sorting: Separate recyclable, hazardous, and organic materials for proper processing.</li>
-                <li>Transportation: Safely move waste to disposal, recycling, or treatment facilities.</li>
-                <li>Disposal: Ensure environmentally safe disposal in landfills or incinerators.</li>
-                <li>Efficiency: Optimize routes and methods to minimize costs and environmental impact.</li>
-            </ul>
-            <pre><code>
-#include &lt;iostream&gt;
-#include &lt;vector&gt;
-#include &lt;cmath&gt;
-#include &lt;climits&gt;
+                <li>Collection: Gather waste from residential, commercial, and industrial sources.</li><br>
+                <li>Sorting: Separate recyclable, hazardous, and organic materials for proper processing.</li><br>
+                <li>Transportation: Safely move waste to disposal, recycling, or treatment facilities
+</li><br>
+                <li>Disposal: Ensure environmentally safe disposal in landfills or incinerators.</li><br>
+                            </ul>
+
+            <!-- Code Editor for Business Case 2 -->
+            <div class="code-editor">
+                <h4>Code for Business Case 2</h4><pre>#include <iostream>
+#include <vector>
+#include <cmath>
+#include <climits>
 
 using namespace std;
 
-int tsp(int current, int visited, ... ) { 
-// [Insert C++ code for Transportation of Trash here] 
+int distance(int x1, int y1, int x2, int y2) {
+    return abs(x2 - x1) + abs(y2 - y1);
 }
-int main() { 
-    vector<pair&lt;int, int&gt;> locations = {{0, 0}, {10, 2}}; 
-    int minCost = tsp(0, 1, ... ); 
-    cout &lt;&lt; "Cost: " &lt;&lt; minCost; 
-    return 0; 
-}
-            </code></pre>
-        </div>
 
-</script>
+int tsp(int current, int visited, const vector<vector<int>>& dist, vector<vector<int>>& dp) {
+    if (visited == (1 << dist.size()) - 1) {
+        return dist[current][0];
+    }
+
+    if (dp[current][visited] != -1) {
+        return dp[current][visited];
+    }
+
+    int ans = INT_MAX;
+    for (int next = 0; next < dist.size(); ++next) {
+        if ((visited & (1 << next)) == 0) {
+            int newCost = dist[current][next] + tsp(next, visited | (1 << next), dist, dp);
+            ans = min(ans, newCost);
+        }
+    }
+
+    dp[current][visited] = ans;
+    return ans;
+}
+
+int main() {
+    vector<pair<int, int>> locations = {{0, 0}, {10, 2}, {5, 5}, {8, 8}, {3, 10}};
+    vector<int> trashAmounts = {5, 2, 8, 3, 6};
+
+    int n = locations.size();
+    
+    vector<vector<int>> dist(n, vector<int>(n, 0));
+    for (int i = 0; i < n; ++i) {
+        for (int j = 0; j < n; ++j) {
+            dist[i][j] = distance(locations[i].first, locations[i].second, locations[j].first, locations[j].second);
+        }
+    }
+
+    vector<vector<int>> dp(n, vector<int>((1 << n), -1));
+
+    int minCost = tsp(0, 1, dist, dp);
+
+    cout << "Minimum transportation cost (TSP): " << minCost << endl;
+
+    return 0;
+}</pre>
+                <button class="run-btn">Run Code</button>
+                <div class="output">
+                    <h4>Output :</h4>
+                    <p> 0 → 2: 10
+2 → 3: 6
+3 → 4: 7
+4 → 1: 15
+1 → 0: 12
+Total Cost = 10 + 6 + 7 + 15 + 12 = 38.Minimum transportation cost (TSP): 38
+</p>
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
+
+</section>
+
+</body>
+</html>
 
 
         
