@@ -531,3 +531,27 @@ h1 {
         }
     }
 </style>
+table {
+    width: 80%; /* Adjust the table width as needed */
+    margin: 20px auto; /* This will center the table */
+    border-collapse: collapse; /* Ensures table borders collapse neatly */
+}
+
+th, td {
+    padding: 12px 15px; /* Adds spacing inside table cells */
+    text-align: left; /* Align text to the left inside cells */
+    border: 1px solid #ddd; /* Adds a light border around cells */
+}
+
+th {
+    background-color: #2980b9;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tr:hover {
+    background-color: #d9e3f0; /* Slight hover effect */
+}
