@@ -352,3 +352,63 @@ contact.team-image {
     font-size: 5rem; /* Adjust the size as per your preference */
     font-weight: bold; /* Optional for better emphasis */
     text-align: left
+}
+
+<style>
+    /* Sub-Problems Table Styling */
+    .colorful-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .colorful-table th, .colorful-table td {
+        padding: 12px 20px;
+        text-align: left;
+        font-size: 1rem;
+        border: 1px solid #ddd;
+    }
+
+    .colorful-table th {
+        background-color: #ff6347; /* Tomato Red */
+        color: white;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+
+    .colorful-table td {
+        background-color: #f9f9f9;
+        color: #333;
+    }
+
+    .colorful-table tr:nth-child(even) td {
+        background-color: #e0f7fa; /* Light Cyan */
+    }
+
+    .colorful-table tr:nth-child(odd) td {
+        background-color: #f1f8e9; /* Light Green */
+    }
+
+    .colorful-table tr:hover td {
+        background-color: #ffeb3b; /* Yellow on hover */
+        transition: background-color 0.3s ease;
+    }
+
+    .colorful-table td strong {
+        color: #ff6347; /* Tomato Red */
+    }
+
+    .colorful-table td p {
+        margin: 0;
+        color: #333;
+    }
+
+    /* Hover effect for the table */
+    .colorful-table:hover {
+        transform: scale(1.02);
+        transition: transform 0.2s ease-in-out;
+    }
+</style>
