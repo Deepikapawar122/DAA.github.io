@@ -639,3 +639,9 @@ tr:hover {
 .next-btn {
     right: 0;
 }
+.home {
+    background-image: url('https://cdn.activestate.com/wp-content/uploads/2018/10/blog-17-11-02-accel-algorithms-1200x675.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
