@@ -31,24 +31,22 @@ header .logo span {
     color: #f7c04a;
 }
 
-/* Navigation Bar */
-.navbar li {
-    margin: 0 5px; /* Reduced spacing between nav items */
+.navbar{
+    display: flex;
 }
-
-.navbar li a {
-    color: white;
-    font-weight: 400; /* Reduced font weight for a lighter appearance */
-    font-size: 14px; /* Reduced font size for smaller links */
-    padding: 8px 12px; /* Reduced padding for smaller clickable area */
+.navbar a{
+    color: var(--text-color);
+    font-size: var(--p-font);
+    font-weight: bold;
+    padding: 10px 25px;
+    margin: 0 2px;
+    border-radius: 0.5rem;
+    transition: all .40s ease;
 }
-
-.navbar li a:hover {
-    color: #f7c04a;
-    background-color: transparent; /* Removed background color on hover */
-    text-decoration: underline; /* Added underline on hover for a clean effect */
+.navbar a:hover{
+    background: var(--main-color);
+    color: var(--text-color);
 }
-
 
 /* Course Details Section */
 .course_details h2 {
