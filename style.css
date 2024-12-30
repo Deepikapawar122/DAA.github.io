@@ -1,54 +1,5 @@
-[8:45 PM, 12/30/2024] Deepika Pawar: #include <iostream>
-#include <vector>
-#include <cmath>
-#include <climits>
 
-using namespace std;
-
-int distance(int x1, int y1, int x2, int y2) {
-    return abs(x2 - x1) + abs(y2 - y1);
-}
-
-int tsp(int current, int visited, const vector<vector<int>>& dist, vector<vector<int>>& dp) {
-    if (visited == (1 << dist.size()) - 1) {
-        return dist[current][0];
-    }
-
-    if (dp[current][visited] != -1) {
-        return dp[current][visited];
-    }
-
-    int ans = INT_MAX;
-    for (int next = 0; next < dist.size(); ++next) {
-        if ((visited & (1 << next)) == 0) {
-            int newCost = dist[current][next] + tsp(next, visited | (1 << next), dist, dp);
-            ans = min(ans, newCost);
-        }
-    }
-
-    dp[current][visited] = ans;
-    return ans;
-}
-
-int…
-[8:46 PM, 12/30/2024] Deepika Pawar: <!DOCTYPE html> 
-<html>
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-
-    <title>User Portfolio</title>
-    <!-- Custom CSS link -->
-    <link rel="stylesheet" type="text/css" href="style.css">
-
-    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="s…
-[8:46 PM, 12/30/2024] Deepika Pawar: /* Basic Styles */
+  /* Basic Styles */
 body {
     font-family: 'Times New Roman', Times, serif;
     background-color: #f4f4f4;
