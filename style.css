@@ -418,25 +418,27 @@ contact.team-image {
 <style>
     /* Learning Reflections Section */
     .learning-reflections {
-        max-width: 900px;
+        max-width: 1000px;
         margin: 50px auto;
         padding: 20px;
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        background-color: #fff;
+        font-family: 'Arial', sans-serif;
+        background-color: #f4f4f9; /* Light grey background */
         border-radius: 8px;
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     }
 
     h1 {
         font-size: 2.5rem;
-        color: #2c3e50;
+        color: #34495e; /* Dark Grey */
         text-align: center;
         margin-bottom: 20px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
     }
 
     p {
         text-align: center;
-        font-size: 1.2rem;
+        font-size: 1.1rem;
         color: #7f8c8d;
         margin-bottom: 30px;
         line-height: 1.6;
@@ -446,9 +448,9 @@ contact.team-image {
     .learning-table {
         width: 100%;
         border-collapse: collapse;
+        margin-top: 20px;
         border-radius: 8px;
         overflow: hidden;
-        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
     }
 
     .learning-table th, .learning-table td {
@@ -467,7 +469,7 @@ contact.team-image {
 
     .learning-table td {
         background-color: #ecf0f1; /* Light grey */
-        color: #2c3e50;
+        color: #34495e;
     }
 
     .learning-table tr:nth-child(even) td {
@@ -480,24 +482,27 @@ contact.team-image {
 
     /* Hover Effects */
     .learning-table tr:hover td {
-        background-color: #f39c12; /* Yellow */
+        background-color: #ffcc00; /* Yellow */
         color: white;
         transition: background-color 0.3s ease;
     }
 
     .learning-table td strong {
-        color: #3498db; /* Blue for headings */
+        color: #2980b9; /* Dark Blue for headings */
     }
 
     /* Row Specific Coloring */
-    .row-1 td {
+    .learning-table tr:nth-child(1) td {
         background-color: #ffe6e6; /* Soft Red */
     }
-    .row-2 td {
+    .learning-table tr:nth-child(2) td {
         background-color: #d6f5d6; /* Soft Green */
     }
-    .row-3 td {
+    .learning-table tr:nth-child(3) td {
         background-color: #ffffcc; /* Soft Yellow */
+    }
+    .learning-table tr:nth-child(4) td {
+        background-color: #f0f8ff; /* Soft Blue */
     }
     /* Add additional row styling as needed */
 </style>
