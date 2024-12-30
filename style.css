@@ -509,59 +509,71 @@ contact.team-image {
 
 
 <style>
-    /* Course Content Table Styling */
-    .course-content-table {
-        width: 100%;
-        border-collapse: collapse;
-        margin: 30px auto;
+    /* General Section Styling */
+    .topic-details {
         font-family: 'Arial', sans-serif;
-        font-size: 1rem;
-        border-radius: 10px;
-        overflow: hidden;
-        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+        margin: 40px auto;
+        padding: 20px;
+        max-width: 1200px;
+        text-align: center;
     }
 
-    .course-content-table thead {
-        background: linear-gradient(90deg, #4caf50, #81c784); /* Green gradient */
-        color: white;
+    .topic-details h1 {
+        font-size: 2rem;
+        color: #333;
+        margin-bottom: 30px;
         text-transform: uppercase;
+        letter-spacing: 1px;
     }
 
-    .course-content-table th {
-        padding: 15px;
+    /* Card Container */
+    .card-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 20px;
+    }
+
+    /* Card Styling */
+    .card {
+        background: #fff;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        padding: 20px;
         text-align: left;
-        font-weight: bold;
-        font-size: 1.1rem;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
-    .course-content-table tbody tr {
-        transition: all 0.3s ease;
+    .card h2 {
+        font-size: 1.5rem;
+        color: #4caf50;
+        margin-bottom: 15px;
     }
 
-    .course-content-table td {
-        padding: 15px;
-        background: #f9f9f9; /* Light grey background for content */
-        border-bottom: 1px solid #ddd;
+    .card p {
+        font-size: 1rem;
+        color: #555;
+        line-height: 1.6;
     }
 
-    .course-content-table tr:nth-child(even) td {
-        background: #ffffff; /* White background for alternate rows */
-    }
-
-    .course-content-table tbody tr:hover {
-        background: #e8f5e9; /* Light green background on hover */
-        transform: scale(1.02); /* Slight scaling effect */
-    }
-
-    .course-content-table td strong {
-        color: #388e3c; /* Green color for topic titles */
+    /* Card Hover Effects */
+    .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
     }
 
     /* Responsive Design */
     @media (max-width: 768px) {
-        .course-content-table th, .course-content-table td {
+        .topic-details h1 {
+            font-size: 1.8rem;
+        }
+
+        .card h2 {
+            font-size: 1.3rem;
+        }
+
+        .card p {
             font-size: 0.9rem;
-            padding: 10px;
         }
     }
 </style>
+
