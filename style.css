@@ -412,3 +412,125 @@ contact.team-image {
         transition: transform 0.2s ease-in-out;
     }
 </style>
+
+
+
+<style>
+    /* Overall Learning Reflections Section */
+    .learning-reflections {
+        margin: 50px auto;
+        max-width: 900px;
+        padding: 20px;
+        font-family: Arial, sans-serif;
+    }
+
+    h1 {
+        text-align: center;
+        font-size: 2.5rem;
+        font-weight: bold;
+        margin-bottom: 20px;
+        color: #2c3e50;
+    }
+
+    p {
+        text-align: center;
+        font-size: 1.2rem;
+        color: #7f8c8d;
+        margin-bottom: 30px;
+    }
+
+    /* Table Styling */
+    .learning-table {
+        width: 100%;
+        border-collapse: collapse;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .learning-table th, .learning-table td {
+        padding: 20px;
+        text-align: left;
+        font-size: 1.1rem;
+        border: 1px solid #ddd;
+    }
+
+    .learning-table th {
+        background-color: #3498db; /* Vibrant blue */
+        color: white;
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+
+    .learning-table td {
+        background-color: #ecf0f1; /* Light gray */
+        color: #2c3e50;
+    }
+
+    .learning-table tr:nth-child(even) td {
+        background-color: #f9f9f9; /* Soft light gray */
+    }
+
+    .learning-table tr:nth-child(odd) td {
+        background-color: #f0f8ff; /* Soft light blue */
+    }
+
+    .learning-table tr:hover td {
+        background-color: #f39c12; /* Vibrant yellow on hover */
+        color: white;
+        transition: background-color 0.3s ease;
+    }
+
+    .learning-table td strong {
+        color: #3498db; /* Vibrant blue for headings */
+    }
+
+    /* Specific Row Coloring */
+    .row-1 td {
+        background-color: #ffe6e6; /* Soft red */
+    }
+    .row-2 td {
+        background-color: #d6f5d6; /* Soft green */
+    }
+    .row-3 td {
+        background-color: #ffffcc; /* Soft yellow */
+    }
+    .row-4 td {
+        background-color: #e6f7ff; /* Soft blue */
+    }
+    .row-5 td {
+        background-color: #f9d6e5; /* Soft pink */
+    }
+    .row-6 td {
+        background-color: #f1f0f0; /* Soft grey */
+    }
+    .row-7 td {
+        background-color: #e6ffe6; /* Light green */
+    }
+    .row-8 td {
+        background-color: #ffecb3; /* Soft amber */
+    }
+    .row-9 td {
+        background-color: #e6e6fa; /* Lavender */
+    }
+    .row-10 td {
+        background-color: #fff2cc; /* Pale yellow */
+    }
+    .row-11 td {
+        background-color: #d9f7e9; /* Mint green */
+    }
+    .row-12 td {
+        background-color: #ffb3b3; /* Soft red */
+    }
+    .row-13 td {
+        background-color: #f0f8ff; /* Light azure */
+    }
+    .row-14 td {
+        background-color: #fff5e6; /* Cream */
+    }
+    .row-15 td {
+        background-color: #f2d9ff; /* Light purple */
+    }
+
+</style>
+
