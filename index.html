@@ -592,72 +592,105 @@ Total Cost = 10 + 6 + 7 + 15 + 12 = 38.Minimum transportation cost (TSP): 38
 </section>
 
 
-</body>
-</html>
 <title>SDGs for Business Cases</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
             line-height: 1.6;
-            background-color: #f9f9f9; /* Light background for contrast */
-            color: #333; /* Default text color */
+            background-color: #f4f4f9;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
         .heading {
             text-align: center;
-            font-size: 2em;
+            font-size: 2.5em;
             font-weight: bold;
-            margin: 20px 0;
-            color: #0056b3; /* Blue color for heading */
+            margin-bottom: 20px;
+            color: #0056b3;
         }
         .business-case {
             margin: 20px 0;
-            padding: 15px;
-            border: 1px solid #ddd; /* Add a border for better visibility */
+            padding: 20px;
+            border: 1px solid #ddd;
             border-radius: 8px;
-            background-color: #fff; /* White background for clarity */
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+            background: linear-gradient(135deg, #e9f7ff, #f7fbff);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .business-case:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
         }
         .business-case h2 {
-            font-size: 1.6em;
-            color: #007bff; /* Blue for subheadings */
+            font-size: 1.8em;
+            color: #003366;
             margin-bottom: 10px;
         }
         .sdg-list {
-            margin: 10px 0;
-            padding-left: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 10px;
+            padding: 0;
+            list-style: none;
         }
         .sdg-list li {
-            margin: 5px 0;
-            font-size: 1.2em; /* Increase font size for visibility */
-            color: #333; /* Darker color for SDG text */
+            background-color: #f0f8ff;
+            padding: 10px 15px;
+            border-radius: 5px;
+            border: 1px solid #cce7ff;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1em;
+            color: #333;
+            flex: 1 1 calc(33.333% - 20px);
+        }
+        .sdg-list li:hover {
+            background-color: #e6f4ff;
+            border-color: #b0dfff;
+        }
+        .sdg-icon {
+            font-size: 1.5em;
+            color: #007bff;
         }
     </style>
 </head>
 <body>
-    <div class="heading">SDGs for Business Cases</div>
-    
-    <div class="business-case">
-        <h2> Business Case 1: Traffic Signal Control</h2>
-        <ul class="sdg-list">
-            <li>SDG 9: Industry, Innovation, and Infrastructure</li>
-            <li>SDG 11: Sustainable Cities and Communities</li>
-            <li>SDG 12: Responsible Consumption and Production</li>
-            <li>SDG 13: Climate Action</li>
-            <li>SDG 16: Peace, Justice, and Strong Institutions</li>
-            <li>SDG 17: Partnerships for the Goals</li>
-        </ul>
-    </div>
-    
-    <div class="business-case">
-        <h2>Business Case 2:Transportation of Trash</h2>
-        <ul class="sdg-list">
-            <li>SDG 11: Sustainable Cities and Communities</li>
-            <li>SDG 12: Responsible Consumption and Production</li>
-            <li>SDG 13: Climate Action</li>
-            <li>SDG 6: Clean Water and Sanitation</li>
-            <li>SDG 3: Good Health and Well-Being</li>
-            <li>SDG 17: Partnerships for the Goals</li>
-        </ul>
+    <div class="container">
+        <div class="heading">SDGs for Business Cases</div>
+        
+        <div class="business-case">
+            <h2>Business Case 1: Traffic Signal Control</h2>
+            <ul class="sdg-list">
+                <li><span class="sdg-icon">🌍</span>SDG 9: Industry, Innovation, and Infrastructure</li>
+                <li><span class="sdg-icon">🏙️</span>SDG 11: Sustainable Cities and Communities</li>
+                <li><span class="sdg-icon">♻️</span>SDG 12: Responsible Consumption and Production</li>
+                <li><span class="sdg-icon">🌱</span>SDG 13: Climate Action</li>
+                <li><span class="sdg-icon">⚖️</span>SDG 16: Peace, Justice, and Strong Institutions</li>
+                <li><span class="sdg-icon">🤝</span>SDG 17: Partnerships for the Goals</li>
+            </ul>
+        </div>
+        
+        <div class="business-case">
+            <h2>Business Case 2: Transportation of Trash</h2>
+            <ul class="sdg-list">
+                <li><span class="sdg-icon">🏙️</span>SDG 11: Sustainable Cities and Communities</li>
+                <li><span class="sdg-icon">♻️</span>SDG 12: Responsible Consumption and Production</li>
+                <li><span class="sdg-icon">🌱</span>SDG 13: Climate Action</li>
+                <li><span class="sdg-icon">💧</span>SDG 6: Clean Water and Sanitation</li>
+                <li><span class="sdg-icon">❤️</span>SDG 3: Good Health and Well-Being</li>
+                <li><span class="sdg-icon">🤝</span>SDG 17: Partnerships for the Goals</li>
+            </ul>
+        </div>
     </div>
 </body>
         
