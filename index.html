@@ -410,12 +410,11 @@
                             </ul>
 
             <!-- Code Editor for Business Case 1 -->
-            <div class="code-editor">
-                <h4>Implementation for Business Case 1</h4>
-		    <div class="code-editor">
-        <button class="run-btn" onclick="simulateCodeRunBC1()">Run Code</button>
-        <pre><code class="cpp">
-                    
+            <!-- Code Editor for Business Case 1 -->
+<div class="code-editor">
+    <h4>Implementation for Business Case 1</h4>
+    <button class="run-btn" onclick="simulateCodeRunBC1()">Run Code</button>
+    <pre><code class="cpp">
 #include <iostream>
 #include <queue>
 #include <string>
@@ -474,20 +473,13 @@ int main() {
 
     return 0;
 }
-       </pre>
-                <button class="run-btn">Run Code</button>
-                <div class="output">
-			 </code></pre>
-    </div>
-    <div id="outputBC1" class="output"></div>
+    </code></pre>
+    <div id="outputBC1" class="output"></div> <!-- This will display the output -->
 </div>
- <!--   </div>  -->
- <!-- </section> -->
 
-  <li></li>
-
- <script>
- function simulateCodeRunBC1() {
+<script>
+function simulateCodeRunBC1() {
+    // The output will be displayed in the div with id "outputBC1"
     document.getElementById('outputBC1').innerHTML = `Vehicle passed through North signal.
 Vehicle passed through North signal.
 No vehicles at North signal.
@@ -508,8 +500,7 @@ North green for 3 seconds.
 No vehicles at North signal.... `;
 }
 </script>
-                    <
-                     </p>
+      </p>
                 </div>
             </div>
         </div>
