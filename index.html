@@ -475,7 +475,7 @@ int main() {
 }
     </code></pre>
     <div id="outputBC1" class="output"></div> <!-- This will display the output -->
-		    <button class="run-btn" onclick="simulateCodeRunBC1()">Run Code</button>
+	<button class="run-btn" onclick="simulateCodeRunBC1()">Run Code</button>
 <div id="outputBC1" class="output"></div>
 
 </div>
@@ -484,25 +484,28 @@ int main() {
 	
 function simulateCodeRunBC1() {
     // The output will be displayed in the div with id "outputBC1"
-    document.getElementById('outputBC1').innerHTML = `Vehicle passed through North signal.
-Vehicle passed through North signal.
-No vehicles at North signal.
+    document.getElementById('outputBC1').innerHTML = `Vlet output = `
+            <span class="highlight">Vehicle passed through North signal.</span>
+            <span class="highlight">Vehicle passed through North signal.</span>
+            No vehicles at North signal.<br><br>
 
-South green for 3 seconds.
-Vehicle passed through South signal.
-No vehicles at South signal.
+            <span class="highlight">South green for 3 seconds.</span><br>
+            <span class="highlight">Vehicle passed through South signal.</span>
+            No vehicles at South signal.<br><br>
 
-East green for 3 seconds.
-Vehicle passed through East signal.
-No vehicles at East signal.
+            <span class="highlight">East green for 3 seconds.</span><br>
+            <span class="highlight">Vehicle passed through East signal.</span>
+            No vehicles at East signal.<br><br>
 
-West green for 3 seconds.
-Vehicle passed through West signal.
-No vehicles at West signal.
+            <span class="highlight">West green for 3 seconds.</span><br>
+            <span class="highlight">Vehicle passed through West signal.</span>
+            No vehicles at West signal.<br><br>
 
-North green for 3 seconds.
-No vehicles at North signal.... `;
-}
+            <span class="highlight">North green for 3 seconds.</span><br>
+            No vehicles at North signal....
+            `;
+            document.getElementById('outputBC1').innerHTML = output;
+        }
 </script>
       </p>
                 </div>
