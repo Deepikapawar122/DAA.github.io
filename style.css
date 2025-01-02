@@ -796,3 +796,19 @@ tr:hover {
     }
 </style>
 
+<style>
+    .highlight {
+        background-color: yellow;  /* Background color */
+        color: red;                /* Text color */
+        font-weight: bold;         /* Makes the text bold */
+        padding: 2px 5px;          /* Adds padding around the text */
+        border-radius: 3px;        /* Adds rounded corners to the background */
+    }
+
+    .output {
+        font-family: Arial, sans-serif;
+        font-size: 16px;
+        line-height: 1.6;
+        margin-top: 20px;
+    }
+</style>
