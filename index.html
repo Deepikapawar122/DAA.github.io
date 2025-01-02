@@ -391,41 +391,37 @@
 
     
      
-     <!-- Business Cases Section -->
-	<section class="Business Cases" id="business_cases">
- 
+  <!-- Business Cases Section -->
+<section class="Business Cases" id="business_cases">
     <div class="business-cases">
         <h1 style="text-align: center;">MY BUSINESS CASES</h1>
 
         <!-- Business Case 1 -->
         <div class="business-case">
-            <h3 style="color: rgb(232, 126, 126);">Business Case 1:Traffic Signal Control</h3>
-		<p>Using Queue data strcuture</p>
-            <p>Description:Implement intelligent traffic signal systems that adapt to real-time traffic flow, reducing congestion and travel delays</p>
+            <h3 style="color: rgb(232, 126, 126);">Business Case 1: Traffic Signal Control</h3>
+            <p>Using Queue data structure</p>
+            <p>Description: Implement intelligent traffic signal systems that adapt to real-time traffic flow, reducing congestion and travel delays.</p>
             <ul>
                 <li>Regulates signal timing to minimize delays and maximize traffic movement efficiency.</li><br>
                 <li>Reduces accident risks by controlling vehicle and pedestrian interactions at intersections.</li><br>
                 <li>Allows priority for emergency vehicles, public transit, or pedestrians when needed.</li><br>
                 <li>Adjusts signal timing dynamically based on real-time traffic conditions.</li><br>
-                            </ul>
+            </ul>
 
-            <!-- Code Editor for Business Case 1 -->
-            <!-- Code Editor for Business Case 1 -->
-<div class="code-editor">
-    <h4>Implementation for Business Case 1</h4>
-   
-    <pre><code class="cpp">
-#include <iostream>
-#include <queue>
-#include <string>
-#include <thread>
-#include <chrono>
+            <div class="code-editor">
+                <h4>Implementation for Business Case 1</h4>
+                <pre><code class="cpp">
+#include &lt;iostream&gt;
+#include &lt;queue&gt;
+#include &lt;string&gt;
+#include &lt;thread&gt;
+#include &lt;chrono&gt;
 
 using namespace std;
 
 class TrafficSignalControl {
 private:
-    queue<int> northQueue, southQueue, eastQueue, westQueue;
+    queue&lt;int&gt; northQueue, southQueue, eastQueue, westQueue;
     int greenTime = 3;
 
 public:
@@ -435,7 +431,6 @@ public:
         if (direction == 2) eastQueue.push(1);
         if (direction == 3) westQueue.push(1);
     }
-
     void processTraffic() {
         while (true) {
             processDirection(northQueue, "North");
@@ -447,15 +442,15 @@ public:
     }
 
 private:
-    void processDirection(queue<int>& q, string direction) {
+    void processDirection(queue&lt;int&gt;&amp; q, string direction) {
         if (!q.empty()) {
-            cout << direction << " green for " << greenTime << " seconds.\n";
-            for (int i = 0; i < greenTime && !q.empty(); ++i) {
+            cout &lt;&lt; direction &lt;&lt; " green for " &lt;&lt; greenTime &lt;&lt; " seconds." &lt;&lt; endl;
+            for (int i = 0; i &lt; greenTime &amp;&amp; !q.empty(); ++i) {
                 q.pop();
-                cout << "Vehicle passed through " << direction << " signal.\n";
+                cout &lt;&lt; "Vehicle passed through " &lt;&lt; direction &lt;&lt; " signal." &lt;&lt; endl;
             }
         } else {
-            cout << "No vehicles at " << direction << " signal.\n";
+            cout &lt;&lt; "No vehicles at " &lt;&lt; direction &lt;&lt; " signal." &lt;&lt; endl;
         }
     }
 };
@@ -473,46 +468,44 @@ int main() {
 
     return 0;
 }
-    </code></pre>
-    <div id="outputBC1" class="output"></div> <!-- This will display the output -->
-	<button class="run-btn" onclick="simulateCodeRunBC1()">Run Code</button>
-<div id="outputBC1" class="output"></div>
-
-</div>
-<div id="outputBC1" class="output"></div> <!-- This will display the output -->
-    <button class="run-btn" onclick="simulateCodeRunBC1()">Run Code</button>
-<script>
-	
-function simulateCodeRunBC1() {
-    // The output will be displayed in the div with id "outputBC1"
-    document.getElementById('outputBC1').innerHTML = `Vlet output = `
-            <span class="highlight">Vehicle passed through North signal.</span>
-            <span class="highlight">Vehicle passed through North signal.</span>
-            No vehicles at North signal.<br><br>
-
-            <span class="highlight">South green for 3 seconds.</span><br>
-            <span class="highlight">Vehicle passed through South signal.</span>
-            No vehicles at South signal.<br><br>
-
-            <span class="highlight">East green for 3 seconds.</span><br>
-            <span class="highlight">Vehicle passed through East signal.</span>
-            No vehicles at East signal.<br><br>
-
-            <span class="highlight">West green for 3 seconds.</span><br>
-            <span class="highlight">Vehicle passed through West signal.</span>
-            No vehicles at West signal.<br><br>
-
-            <span class="highlight">North green for 3 seconds.</span><br>
-            No vehicles at North signal....
-            `;
-            document.getElementById('outputBC1').innerHTML = output;
-        }
-</script>
-      </p>
-                </div>
+                </code></pre>
             </div>
+
+            <div id="outputBC1" class="output"></div> <!-- This will display the output -->
+            <button class="run-btn" onclick="simulateCodeRunBC1()">Run Code</button>
+
+            <script>
+                function simulateCodeRunBC1() {
+                    // The output will be displayed in the div with id "outputBC1"
+                    let output = `
+                    <span class="highlight">Vehicle passed through North signal.</span>
+                    <span class="highlight">Vehicle passed through North signal.</span>
+                    No vehicles at North signal.<br><br>
+
+                    <span class="highlight">South green for 3 seconds.</span><br>
+                    <span class="highlight">Vehicle passed through South signal.</span>
+                    No vehicles at South signal.<br><br>
+
+                    <span class="highlight">East green for 3 seconds.</span><br>
+                    <span class="highlight">Vehicle passed through East signal.</span>
+                    No vehicles at East signal.<br><br>
+
+                    <span class="highlight">West green for 3 seconds.</span><br>
+                    <span class="highlight">Vehicle passed through West signal.</span>
+                    No vehicles at West signal.<br><br>
+
+                    <span class="highlight">North green for 3 seconds.</span><br>
+                    No vehicles at North signal....
+                    `;
+
+                    // Display the output inside the div with id "outputBC1"
+                    document.getElementById('outputBC1').innerHTML = output;
+                }
+            </script>
+
         </div>
-        <br><br><br>
+    </div>
+</section>
 
         <!-- Business Case 2 -->
         <div class="business-case">
