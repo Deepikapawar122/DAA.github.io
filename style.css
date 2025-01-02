@@ -763,3 +763,18 @@ tr:hover {
     background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background for text readability */
 }
 
+<style>
+    /* Styling for the output div */
+    .output {
+        background-color: #333; /* Dark background */
+        color: white; /* White text */
+        padding: 20px; /* Add padding for spacing */
+        border-radius: 8px; /* Optional: Rounded corners */
+        font-family: Arial, sans-serif; /* Optional: Custom font */
+        font-size: 16px; /* Font size */
+        margin-top: 10px; /* Spacing above the output */
+        white-space: pre-wrap; /* Preserve formatting (like new lines) */
+        max-height: 300px; /* Limit the height of the output box */
+        overflow-y: auto; /* Add scroll bar if the content exceeds max height */
+    }
+</style>
