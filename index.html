@@ -412,12 +412,15 @@
             <!-- Code Editor for Business Case 1 -->
             <div class="code-editor">
                 <h4>Implementation for Business Case 1</h4>
-                <pre>      
-#include  iostream
-#include queue
-#include string>
-#include thread>
-#include chrono>
+		    <div class="code-editor">
+        <button class="run-btn" onclick="simulateCodeRunBC1()">Run Code</button>
+        <pre><code class="cpp">
+                    
+#include <iostream>
+#include <queue>
+#include <string>
+#include <thread>
+#include <chrono>
 
 using namespace std;
 
@@ -461,22 +464,31 @@ private:
 int main() {
     TrafficSignalControl tsc;
 
-    tsc.addVehicleToQueue(0);  // North
-    tsc.addVehicleToQueue(0);  // North
-    tsc.addVehicleToQueue(1);  // South
-    tsc.addVehicleToQueue(2);  // East
-    tsc.addVehicleToQueue(3);  // West
+    tsc.addVehicleToQueue(0);
+    tsc.addVehicleToQueue(0);
+    tsc.addVehicleToQueue(1);
+    tsc.addVehicleToQueue(2);
+    tsc.addVehicleToQueue(3);
 
     tsc.processTraffic();
 
     return 0;
 }
-                                          </pre>
+       </pre>
                 <button class="run-btn">Run Code</button>
                 <div class="output">
-                    <h4>Output :</h4>
-                    <p>   North green for 3 seconds.
-Vehicle passed through North signal.
+			 </code></pre>
+    </div>
+    <div id="outputBC1" class="output"></div>
+</div>
+ <!--   </div>  -->
+ <!-- </section> -->
+
+  <li></li>
+
+ <script>
+ function simulateCodeRunBC1() {
+    document.getElementById('outputBC1').innerHTML = `Vehicle passed through North signal.
 Vehicle passed through North signal.
 No vehicles at North signal.
 
@@ -493,17 +505,10 @@ Vehicle passed through West signal.
 No vehicles at West signal.
 
 North green for 3 seconds.
-No vehicles at North signal.
-
-South green for 3 seconds.
-No vehicles at South signal.
-
-East green for 3 seconds.
-No vehicles at East signal.
-
-West green for 3 seconds.
-No vehicles at West signal.
-...
+No vehicles at North signal.... `;
+}
+</script>
+                    <
                      </p>
                 </div>
             </div>
