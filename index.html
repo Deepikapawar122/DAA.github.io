@@ -406,34 +406,35 @@
                 <h4>Implementation for Business Case 1</h4>
                 <pre><code class="cpp">
 
-  #include <iostream>
-#include <queue>
-#include <string>
+ <pre>
+#include &lt;iostream&gt;
+#include &lt;queue&gt;
+#include &lt;string&gt;
 
 using namespace std;
 
 int main() {
-    queue<string> lane1;
-    queue<string> lane2;
+    queue&lt;string&gt; lane1;
+    queue&lt;string&gt; lane2;
 
     // Predefined vehicles for Lane 1
-    lane1.push("Car A");
-    lane1.push("Car B");
-    lane1.push("Car C");
+    lane1.push(&quot;Car A&quot;);
+    lane1.push(&quot;Car B&quot;);
+    lane1.push(&quot;Car C&quot;);
 
     // Predefined vehicles for Lane 2
-    lane2.push("Truck X");
-    lane2.push("Truck Y");
-    lane2.push("Truck Z");
+    lane2.push(&quot;Truck X&quot;);
+    lane2.push(&quot;Truck Y&quot;);
+    lane2.push(&quot;Truck Z&quot;);
 
     const int greenTimePerVehicle = 2;
 
     // Process Lane 1
     if (!lane1.empty()) {
         int greenTimeLane1 = lane1.size() * greenTimePerVehicle;
-        cout << "Green signal for Lane 1 (Duration: " << greenTimeLane1 << " seconds)\n";
+        cout &lt;&lt; &quot;Green signal for Lane 1 (Duration: &quot; &lt;&lt; greenTimeLane1 &lt;&lt; &quot; seconds)&quot; &lt;&lt; endl;
         while (!lane1.empty()) {
-            cout << lane1.front() << " is passing through Lane 1.\n";
+            cout &lt;&lt; lane1.front() &lt;&lt; &quot; is passing through Lane 1.&quot; &lt;&lt; endl;
             lane1.pop();
         }
     }
@@ -441,17 +442,19 @@ int main() {
     // Process Lane 2
     if (!lane2.empty()) {
         int greenTimeLane2 = lane2.size() * greenTimePerVehicle;
-        cout << "Green signal for Lane 2 (Duration: " << greenTimeLane2 << " seconds)\n";
+        cout &lt;&lt; &quot;Green signal for Lane 2 (Duration: &quot; &lt;&lt; greenTimeLane2 &lt;&lt; &quot; seconds)&quot; &lt;&lt; endl;
         while (!lane2.empty()) {
-            cout << lane2.front() << " is passing through Lane 2.\n";
+            cout &lt;&lt; lane2.front() &lt;&lt; &quot; is passing through Lane 2.&quot; &lt;&lt; endl;
             lane2.pop();
         }
     }
 
-    cout << "All vehicles have passed the traffic signal.\n";
+    cout &lt;&lt; &quot;All vehicles have passed the traffic signal.&quot; &lt;&lt; endl;
 
     return 0;
 }
+        </pre>
+
 
                 </code></pre>
            <div class="output">
@@ -484,8 +487,7 @@ int main() {
             <!-- Code Editor for Business Case 2 -->
             <div class="code-editor">
                 <h4>Implementation for Business Case 2</h4><pre>
-<title>Transporatation of Trash</title>
-			 <p>Using Travelling salesman algorithm ad Greedy technique</p>
+
     <style>
         body {
             font-family: Arial, sans-serif;
