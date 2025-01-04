@@ -411,63 +411,54 @@
             <div class="code-editor">
                 <h4>Implementation for Business Case 1</h4>
                 <pre><code class="cpp">
-#include &lt;iostream&gt;
-#include &lt;queue&gt;
-#include &lt;string&gt;
-#include &lt;thread&gt;
-#include &lt;chrono&gt;
+
+  #include <iostream>
+#include <queue>
+#include <string>
 
 using namespace std;
 
-class TrafficSignalControl {
-private:
-    queue&lt;int&gt; northQueue, southQueue, eastQueue, westQueue;
-    int greenTime = 3;
-
-public:
-    void addVehicleToQueue(int direction) {
-        if (direction == 0) northQueue.push(1);
-        if (direction == 1) southQueue.push(1);
-        if (direction == 2) eastQueue.push(1);
-        if (direction == 3) westQueue.push(1);
-    }
-    void processTraffic() {
-        while (true) {
-            processDirection(northQueue, "North");
-            processDirection(southQueue, "South");
-            processDirection(eastQueue, "East");
-            processDirection(westQueue, "West");
-            this_thread::sleep_for(chrono::seconds(1));
-        }
-    }
-
-private:
-    void processDirection(queue&lt;int&gt;&amp; q, string direction) {
-        if (!q.empty()) {
-            cout &lt;&lt; direction &lt;&lt; " green for " &lt;&lt; greenTime &lt;&lt; " seconds." &lt;&lt; endl;
-            for (int i = 0; i &lt; greenTime &amp;&amp; !q.empty(); ++i) {
-                q.pop();
-                cout &lt;&lt; "Vehicle passed through " &lt;&lt; direction &lt;&lt; " signal." &lt;&lt; endl;
-            }
-        } else {
-            cout &lt;&lt; "No vehicles at " &lt;&lt; direction &lt;&lt; " signal." &lt;&lt; endl;
-        }
-    }
-};
-
 int main() {
-    TrafficSignalControl tsc;
+    queue<string> lane1;
+    queue<string> lane2;
 
-    tsc.addVehicleToQueue(0);
-    tsc.addVehicleToQueue(0);
-    tsc.addVehicleToQueue(1);
-    tsc.addVehicleToQueue(2);
-    tsc.addVehicleToQueue(3);
+    // Predefined vehicles for Lane 1
+    lane1.push("Car A");
+    lane1.push("Car B");
+    lane1.push("Car C");
 
-    tsc.processTraffic();
+    // Predefined vehicles for Lane 2
+    lane2.push("Truck X");
+    lane2.push("Truck Y");
+    lane2.push("Truck Z");
+
+    const int greenTimePerVehicle = 2;
+
+    // Process Lane 1
+    if (!lane1.empty()) {
+        int greenTimeLane1 = lane1.size() * greenTimePerVehicle;
+        cout << "Green signal for Lane 1 (Duration: " << greenTimeLane1 << " seconds)\n";
+        while (!lane1.empty()) {
+            cout << lane1.front() << " is passing through Lane 1.\n";
+            lane1.pop();
+        }
+    }
+
+    // Process Lane 2
+    if (!lane2.empty()) {
+        int greenTimeLane2 = lane2.size() * greenTimePerVehicle;
+        cout << "Green signal for Lane 2 (Duration: " << greenTimeLane2 << " seconds)\n";
+        while (!lane2.empty()) {
+            cout << lane2.front() << " is passing through Lane 2.\n";
+            lane2.pop();
+        }
+    }
+
+    cout << "All vehicles have passed the traffic signal.\n";
 
     return 0;
 }
+
                 </code></pre>
             </div>
 
