@@ -844,6 +844,63 @@ tr:hover {
     color: #333;  /* Dark color for icons */
     text-decoration: none;  /* Remove underline from icons */
 }
+/* Ensure the business case text is more visible */
+.business-case {
+    font-size: 20px;          /* Increased font size for better visibility */
+    font-weight: bold;        /* Make the text bold */
+    color: #2C3E50;           /* Dark text color (dark gray for better contrast) */
+    margin: 10px 0;           /* Add some spacing between business cases */
+    background-color: #f0f0f0; /* Light background for better contrast */
+    padding: 5px;             /* Add some padding around the text */
+    border-radius: 5px;       /* Rounded corners for the background */
+    text-transform: capitalize; /* Capitalize the first letter of each word */
+}
+
+/* Make sure the container for team member has enough contrast */
+.team-member {
+    background-color: #fff;   /* White background for the team member section */
+    color: #333;              /* Dark text color for readability */
+    padding: 20px;            /* Padding for spacing */
+    border-radius: 8px;       /* Rounded corners for the container */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);  /* Subtle shadow for depth */
+}
+
+/* Ensure the image fits well */
+.team-image {
+    max-width: 100%;           /* Image should fit the container */
+    height: auto;              /* Maintain aspect ratio */
+    border-radius: 8px;        /* Rounded corners for the image */
+    margin-bottom: 15px;       /* Add spacing below the image */
+}
+
+/* Ensure buttons are clearly visible */
+.btn {
+    background-color: #4CAF50;   /* Green background for the button */
+    color: white;                /* White text color */
+    padding: 10px 20px;           /* Padding for better spacing */
+    border: none;                /* Remove border */
+    cursor: pointer;             /* Pointer cursor on hover */
+    font-size: 16px;              /* Larger font size */
+    border-radius: 5px;           /* Rounded corners for the button */
+    margin-top: 15px;             /* Add spacing between button and text */
+}
+
+.btn:hover {
+    background-color: #45a049;   /* Darker green on hover */
+}
+
+/* Ensure social media icons are clearly visible */
+.social-icons a {
+    margin: 0 10px;  /* Space out the icons */
+    font-size: 24px;  /* Increase the icon size */
+    color: #333;      /* Dark color for icons */
+    text-decoration: none;  /* Remove underline from icons */
+}
+
+.social-icons a:hover {
+    color: #0077b5;   /* Change color on hover */
+}
+
 
 .social-icons a:hover {
     color: #0077b5;  /* Change color when hovering */
