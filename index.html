@@ -460,29 +460,19 @@ int main() {
 }
 
                 </code></pre>
-            </div>
-
-            <div id="outputBC1" class="output"></div> <!-- This will display the output -->
-            <button class="run-btn" onclick="simulateCodeRunBC1()">Run Code</button>
-
-          <script>
-    function simulateCodeRunBC1() {
-        // The output will be displayed in the div with id "outputBC1"
-        let output = `
-       Green signal for Lane 1 (Duration: 6 seconds)
-Car A is passing through Lane 1.
-Car B is passing through Lane 1.
-Car C is passing through Lane 1.
-Green signal for Lane 2 (Duration: 6 seconds)
-Truck X is passing through Lane 2.
-Truck Y is passing through Lane 2.
-Truck Z is passing through Lane 2.
-All vehicles have passed the traffic signal.
-        `;
-
-        // Display the output inside the div with id "outputBC1"
-        document.getElementById('outputBC1').innerHTML = output;
-    }
+           <div class="output">
+            Green signal for Lane 1 (Duration: 6 seconds)<br>
+            Car A is passing through Lane 1.<br>
+            Car B is passing through Lane 1.<br>
+            Car C is passing through Lane 1.<br>
+            <br>
+            Green signal for Lane 2 (Duration: 6 seconds)<br>
+            Truck X is passing through Lane 2.<br>
+            Truck Y is passing through Lane 2.<br>
+            Truck Z is passing through Lane 2.<br>
+            <br>
+            All vehicles have passed the traffic signal.
+        </div>
 </script>
 
         </div>
@@ -505,68 +495,83 @@ All vehicles have passed the traffic signal.
             <!-- Code Editor for Business Case 2 -->
             <div class="code-editor">
                 <h4>Implementation for Business Case 2</h4><pre>
-#include iostream>
-#include vector>
-#include cmath>
-#include climits>
-
+#include <iostream>
+#include <vector>
+#include <limits>
 using namespace std;
 
-int distance(int x1, int y1, int x2, int y2) {
-    return abs(x2 - x1) + abs(y2 - y1);
-}
+const int INF = 1e9;
 
-int tsp(int current, int visited, const vector<vector<int>>& dist, vector<vector<int>>& dp) {
-    if (visited == (1 << dist.size()) - 1) {
-        return dist[current][0];
-    }
+int findNearest(int current, const vector<vector<int>>& graph, vector<bool>& visited) {
+    int n = graph.size();
+    int nearest = -1;
+    int minDistance = INF;
 
-    if (dp[current][visited] != -1) {
-        return dp[current][visited];
-    }
-
-    int ans = INT_MAX;
-    for (int next = 0; next < dist.size(); ++next) {
-        if ((visited & (1 << next)) == 0) {
-            int newCost = dist[current][next] + tsp(next, visited | (1 << next), dist, dp);
-            ans = min(ans, newCost);
+    for (int i = 0; i < n; ++i) {
+        if (!visited[i] && graph[current][i] < minDistance) {
+            minDistance = graph[current][i];
+            nearest = i;
         }
     }
 
-    dp[current][visited] = ans;
-    return ans;
+    return nearest;
+}
+
+void greedyTSP(const vector<vector<int>>& graph) {
+    int n = graph.size();
+    vector<bool> visited(n, false);
+    visited[0] = true;
+    int current = 0;
+    int totalDistance = 0;
+
+    cout << "Route: 0 ";
+
+    for (int i = 1; i < n; ++i) {
+        int next = findNearest(current, graph, visited);
+        if (next == -1) break;
+
+        totalDistance += graph[current][next];
+        current = next;
+        visited[current] = true;
+        cout << "-> " << current << " ";
+    }
+
+    totalDistance += graph[current][0];
+    cout << "-> 0" << endl;
+
+    cout << "Total Distance: " << totalDistance << " units" << endl;
 }
 
 int main() {
-    vector<pair<int, int>> locations = {{0, 0}, {10, 2}, {5, 5}, {8, 8}, {3, 10}};
-    vector<int> trashAmounts = {5, 2, 8, 3, 6};
+    int n;
+    cout << "Enter the number of nodes: ";
+    cin >> n;
 
-    int n = locations.size();
-    
-    vector<vector<int>> dist(n, vector<int>(n, 0));
+    vector<vector<int>> graph(n, vector<int>(n));
+    cout << "Enter the adjacency matrix (distance between nodes):" << endl;
     for (int i = 0; i < n; ++i) {
         for (int j = 0; j < n; ++j) {
-            dist[i][j] = distance(locations[i].first, locations[i].second, locations[j].first, locations[j].second);
+            cin >> graph[i][j];
         }
     }
 
-    vector<vector<int>> dp(n, vector<int>((1 << n), -1));
-
-    int minCost = tsp(0, 1, dist, dp);
-
-    cout << "Minimum transportation cost (TSP): " << minCost << endl;
+    greedyTSP(graph);
 
     return 0;
+}
+
 }</pre>
                 <button class="run-btn">Run Code</button>
                 <div class="output">
                     <h4>Output :</h4>
-                    <p> 0 → 2: 10
-2 → 3: 6
-3 → 4: 7
-4 → 1: 15
-1 → 0: 12
-Total Cost = 10 + 6 + 7 + 15 + 12 = 38.Minimum transportation cost (TSP): 38
+                    <p> Enter the number of nodes: 4
+Enter the adjacency matrix (distance between nodes):
+0 2 4 5
+2 0 6 3
+4 6 0 7
+5 3 7 0
+Route: 0 -> 1 -> 3 -> 2 -> 0
+Total Distance: 16 units
 </p>
                 </div>
             </div>
