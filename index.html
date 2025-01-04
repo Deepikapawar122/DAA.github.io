@@ -469,24 +469,15 @@ int main() {
     function simulateCodeRunBC1() {
         // The output will be displayed in the div with id "outputBC1"
         let output = `
-        <span class="highlight">Vehicle passed through North signal.</span>
-        <span class="highlight">Vehicle passed through North signal.</span>
-        No vehicles at North signal.<br><br>
-
-        <span class="highlight">South green for 3 seconds.</span><br>
-        <span class="highlight">Vehicle passed through South signal.</span>
-        No vehicles at South signal.<br><br>
-
-        <span class="highlight">East green for 3 seconds.</span><br>
-        <span class="highlight">Vehicle passed through East signal.</span>
-        No vehicles at East signal.<br><br>
-
-        <span class="highlight">West green for 3 seconds.</span><br>
-        <span class="highlight">Vehicle passed through West signal.</span>
-        No vehicles at West signal.<br><br>
-
-        <span class="highlight">North green for 3 seconds.</span><br>
-        No vehicles at North signal....
+       Green signal for Lane 1 (Duration: 6 seconds)
+Car A is passing through Lane 1.
+Car B is passing through Lane 1.
+Car C is passing through Lane 1.
+Green signal for Lane 2 (Duration: 6 seconds)
+Truck X is passing through Lane 2.
+Truck Y is passing through Lane 2.
+Truck Z is passing through Lane 2.
+All vehicles have passed the traffic signal.
         `;
 
         // Display the output inside the div with id "outputBC1"
