@@ -812,3 +812,39 @@ tr:hover {
         margin-top: 20px;
     }
 </style>
+/* Style for the business case headings */
+.business-case {
+    font-size: 18px;  /* Make the font size larger */
+    font-weight: bold;  /* Make the text bold */
+    color: #333;  /* Use a dark color for the text */
+    margin: 5px 0;  /* Add some spacing between business cases */
+    text-transform: capitalize;  /* Capitalize the first letter of each word */
+}
+
+/* Style for better button visibility */
+.btn {
+    background-color: #4CAF50;  /* A green background for buttons */
+    color: white;  /* White text on the button */
+    padding: 10px 20px;  /* Add padding around the button text */
+    border: none;  /* Remove borders */
+    cursor: pointer;  /* Make the cursor a pointer when hovering over the button */
+    font-size: 16px;  /* Set a larger font size */
+    border-radius: 5px;  /* Rounded corners */
+    margin-top: 10px;  /* Space out the buttons from the text */
+}
+
+.btn:hover {
+    background-color: #45a049;  /* Darker green when hovering over the button */
+}
+
+/* Style for social media icons */
+.social-icons a {
+    margin: 0 10px;  /* Space out the icons */
+    font-size: 24px;  /* Set the icon size */
+    color: #333;  /* Dark color for icons */
+    text-decoration: none;  /* Remove underline from icons */
+}
+
+.social-icons a:hover {
+    color: #0077b5;  /* Change color when hovering */
+}
